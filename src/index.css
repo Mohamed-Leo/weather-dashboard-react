@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+}
+
+.App {
+  padding: 20px 0;
+  height: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #121e3b;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+/* theme------ */
+#dark {
+  background-color: #060c1a;
+}
+
+#light {
+  background-color: #fff;
+}
