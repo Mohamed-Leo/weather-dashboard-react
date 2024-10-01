@@ -6,7 +6,7 @@ function Switcher() {
     const handelSwitch = () => setSwitchDegree(prevDegree => !prevDegree);
 
     return (
-        <div className={`relative  flex gap-6 justify-between bg-white rounded-full p-2 cursor-pointer after:absolute after:bg-[#060c1a] ${switchDegree ? 'after:translate-x-0' : 'after:translate-x-[-95%]'} after:right-[-3px] after:z-0 after:size-10 after:rounded-full after:top-[-4px] after:transition-all after:ease-in-out after:duration-500`}
+        <div className={`switcher relative  flex gap-6 justify-between bg-white rounded-full p-2 cursor-pointer after:absolute after:bg-[#060c1a] ${switchDegree ? 'after:translate-x-0' : 'after:translate-x-[-95%]'} after:right-[-3px] after:z-0 after:size-10 after:rounded-full after:top-[-4px] after:transition-all after:ease-in-out after:duration-500`}
             onClick={handelSwitch}>
 
             {/* degrees */}

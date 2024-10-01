@@ -8,10 +8,10 @@ interface IHighlightBoxProps {
 
 function HighlightBox({element , title , backGround = ''} : IHighlightBoxProps) {
     return (
-        <div className={`${backGround} rounded-2xl sm:p-4 sm:space-y-4 md:py-2 px-6`}>
+        <div className={`highlight-box relative ${backGround} rounded-2xl h-40 xl:h-[100px] py-3 px-6`}>
             <h3 className="sm:text-lg md:text-sm">{title}</h3>
 
-            <div className="text-center">
+            <div className="text-center scale-110 absolute sm:top-[50%] top-[60%] xl:left-[70%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 {element}
             </div>
         </div>

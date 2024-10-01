@@ -1,14 +1,30 @@
-import Header from "./components/Header";
+import { createContext, useState } from "react";
+import Header from "./layouts/Header";
 import MainBoxes from "./components/MainContent";
 
+type Theme = "dark" | "light";
+
+type ThemeContextType = {
+  theme: Theme;
+  toggleTheme: () => void;
+};
+
+// create a themeContext----
+export const ThemeContext = createContext<ThemeContextType | null>(null);
 
 function App() {
+  const [theme, setTheme] = useState<Theme>("dark");
+  const toggleTheme = () =>
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+
   return (
-    <div className="App" id="dark">
-      <Header />
-      <MainBoxes />
-    </div>
-  )
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        <Header />
+        <MainBoxes />
+      </div>
+    </ThemeContext.Provider>
+  );
 }
 
 export default App;

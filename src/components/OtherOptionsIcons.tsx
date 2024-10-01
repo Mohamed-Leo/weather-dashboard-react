@@ -3,7 +3,7 @@ import { IoLocation } from "react-icons/io5"
 
 
 // icons style---
-const iconsStyle = "text-[#676b73] cursor-pointer transition-all active:translate-y-[5px] hover:opacity-100 opacity-70";
+const iconsStyle = "location-icon text-[#676b73] cursor-pointer transition-all active:translate-y-[5px] hover:opacity-100 opacity-70";
 
 
 function OtherOptionsIcons() {

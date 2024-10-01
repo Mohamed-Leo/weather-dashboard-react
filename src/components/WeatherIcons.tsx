@@ -52,6 +52,7 @@ export const RainyIcon = ({ width = 50, height = 50 }) => (
             />
         </defs>
         <path
+            className="shape-stroke"
             fill="url(#b)"
             stroke="#e6effc"
             strokeMiterlimit="10"
@@ -279,7 +280,7 @@ export const WindyCloud = ({ width = 50, height = 50 }) => (
             </path>
             <path
                 fill="none"
-                stroke="url(#b)"
+                stroke="#e6effc"
                 strokeDasharray="24 15"
                 strokeLinecap="round"
                 strokeMiterlimit="10"
@@ -347,7 +348,7 @@ export const Wind = ({ width = 50, height = 50 }) => (
         </path>
         <path
             fill="none"
-            stroke="url(#b)"
+            stroke="#e6effc"
             strokeDasharray="24 15"
             strokeLinecap="round"
             strokeMiterlimit="10"
@@ -425,7 +426,8 @@ export const PartlyCloudy = ({ width = 50, height = 50 }) => (
             />
         </path>
         <path
-            fill="url(#b)"
+            className="shape-stroke"
+            fill="#e6effc"
             stroke="#e6effc"
             strokeMiterlimit="10"
             strokeWidth=".5"
@@ -506,6 +508,7 @@ export const ThunderStormDay = ({ width = 50, height = 50 }) => (
             />
         </path>
         <path
+            className="shape-stroke"
             fill="url(#b)"
             stroke="#e6effc"
             strokeMiterlimit="10"

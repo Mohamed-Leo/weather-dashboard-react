@@ -6,7 +6,7 @@ interface IToDatSunRiseAndSetProps {
 
 function ToDaySunRiseAndSet({ backGround = ''}: IToDatSunRiseAndSetProps) {
     return (
-        <div className={`${backGround} p-3 rounded-lg flex justify-between items-center gap-3`}>
+        <div className={`today-sunrise-set-box ${backGround} justify-center p-3 rounded-lg flex-wrap flex sm:justify-between items-center gap-3`}>
             {/* Sunrise */}
             <div className="space-x-3">
                 <p className="text-center">Sunrise</p>

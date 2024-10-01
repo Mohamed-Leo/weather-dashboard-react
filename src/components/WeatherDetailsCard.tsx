@@ -1,14 +1,14 @@
 import { RiCelsiusLine } from "react-icons/ri"
-import Switcher from "./Switcher"
+import Switcher from "../layouts/Switcher"
 import { RainyIcon } from "./WeatherIcons";
 
 
 function WeatherDetailsCard() {
     return (
-        <div className="flex flex-col gap-10 sm:gap-5 lg:gap-10 justify-between h-full p-4">
+        <div className="weather-details-card flex flex-col gap-10 sm:gap-5 lg:gap-10 justify-between h-full p-4">
             {/* top part */}
             <div className="flex items-center gap-3 justify-between">
-                <h1 className="2xl:text-7xl xl:text-4xl md:text-4xl text-6xl font-bold tracking-wider">Cairo</h1>
+                <h1 className="2xl:text-7xl xl:text-4xl md:text-4xl text-3xl font-bold tracking-wider">Cairo</h1>
                 <Switcher />
             </div>
 
@@ -34,7 +34,7 @@ function WeatherDetailsCard() {
                 {/* wather-icon-status */}
                 <div className="text-center space-y-4 sm:text-left">
                     {/* weather-icon */}
-                    <div className="relative scale-150">
+                    <div className="scale-150 w-fit mx-auto">
                         <RainyIcon width={100} height={100} />
                     </div>
 

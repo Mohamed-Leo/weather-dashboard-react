@@ -1,3 +1,4 @@
+import ToDayBox from "./ToDayBox";
 import { PartlyCloudy } from "./WeatherIcons";
 
 interface IToDayBoxProps {
@@ -18,15 +19,9 @@ const toDayTimes = [
 
 function ToDayListBox({backGround = ''} : IToDayBoxProps) {
     return (
-        <div className={`flex gap-2 justify-between ${backGround} p-5 rounded-3xl`}>
+        <div className={`today-list-boxes flex gap-3 lg:gap-1 flex-wrap justify-center ${backGround} p-5 rounded-3xl`}>
             {
-                toDayTimes.map((today, index) => (
-                    <div key={index} className="text-center shadow-custom hover:bg-[#29354e] transition-colors duration-300 bg-[#1f283b] text-white p-2 rounded-xl border border-[#8d929c]">
-                        <p className="text-sm font-medium uppercase">{today.time}</p>
-                        <div>{today.weatherStatus}</div>
-                        <p className="text-sm font-medium">20°</p>
-                    </div>
-                ))
+                toDayTimes.map((today, index) => (<ToDayBox key={index} todayData = {today}/>))
             }
         </div>
     )
