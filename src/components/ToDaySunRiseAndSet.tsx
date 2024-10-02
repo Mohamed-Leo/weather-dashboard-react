@@ -1,10 +1,10 @@
-import { ClearDay } from './WeatherIcons';
+import { ClearDay } from "./WeatherIcons";
 
 interface IToDatSunRiseAndSetProps {
   backGround?: string;
 }
 
-function ToDaySunRiseAndSet({ backGround = '' }: IToDatSunRiseAndSetProps) {
+function ToDaySunRiseAndSet({ backGround = "" }: IToDatSunRiseAndSetProps) {
   return (
     <div
       className={`today-sunrise-set-box ${backGround} justify-center p-3 rounded-lg flex-wrap flex sm:justify-between items-center gap-3`}

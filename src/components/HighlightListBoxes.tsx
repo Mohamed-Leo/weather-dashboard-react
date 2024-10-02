@@ -1,11 +1,11 @@
-import HighlightBox from './HighlightBox';
-import { UvIndex, Wind, WindyCloud } from './WeatherIcons';
+import HighlightBox from "./HighlightBox";
+import { UvIndex, Wind, WindyCloud } from "./WeatherIcons";
 
 const highlightListBoxes = [
-  { title: 'Chance of Rain', icon: <UvIndex width={60} height={60} /> },
-  { title: 'UV Index', icon: <UvIndex width={60} height={60} /> },
-  { title: 'Wind Status', icon: <Wind width={60} height={60} /> },
-  { title: 'Humidity', icon: <WindyCloud width={60} height={60} /> },
+  { title: "Chance of Rain", icon: <UvIndex width={60} height={60} /> },
+  { title: "UV Index", icon: <UvIndex width={60} height={60} /> },
+  { title: "Wind Status", icon: <Wind width={60} height={60} /> },
+  { title: "Humidity", icon: <WindyCloud width={60} height={60} /> },
 ];
 
 function HighlightListBoxes() {

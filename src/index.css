@@ -12,7 +12,7 @@ body {
 
 .App {
   padding: 20px 0;
-  height: 100%;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -38,13 +38,15 @@ body {
   background-color: #e3e3e4;
 }
 
-#light header .search-box,
+#light header .search-box button,
+#light header .other-options-box button,
 #light main .box .city-box {
   background-color: #fff;
+  color: #000;
 }
 
 #light header .search-box,
-#light header .location-icon,
+#light header .icon,
 #light main .weather-details-card,
 #light main .box {
   color: #000;

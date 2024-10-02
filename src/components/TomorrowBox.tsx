@@ -1,4 +1,4 @@
-import { ThunderStormDay } from './WeatherIcons';
+import { ThunderStormDay } from "./WeatherIcons";
 
 interface ITomorrowBoxProps {
   backGround: string;
