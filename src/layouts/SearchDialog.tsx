@@ -9,11 +9,8 @@ import { Button } from "@/components/ui/button";
 import { FaSearch } from "react-icons/fa";
 import CommandSearchBox from "./CommandSearchBox";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-// api key---
-const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+import { useState } from "react";
+import useFetchCitiesData from "@/hooks/useFetchCitiesData";
 
 function SearchDialog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,34 +27,8 @@ function SearchDialog() {
     setIsOpen(false);
   };
 
-  // sideEffect To call api when---------------------
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const fetchWeatherByCity = async () => {
-      try {
-        const response = await axios.get(
-          `http://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&appid=${apiKey}`,
-        );
-
-        const data = response.data;
-        console.log(data);
-        // check on data to send error if excist----
-        if (data.length) throw new Error("invalid data");
-      } catch (error) {
-        if (error instanceof Error) console.log(error.message);
-      }
-    };
-
-    // check on searchValue before call----
-    if (!searchValue) return;
-    // call the api---
-    fetchWeatherByCity();
-
-    return () => {
-      controller.abort();
-    };
-  }, [searchValue]);
+  // call the api function with searchValue argument---------------------
+  useFetchCitiesData(searchValue);
 
   return (
     <div className="search-box w-full sm:w-fit">
