@@ -1,4 +1,4 @@
-import { ClearDay } from "./WeatherIcons";
+import { ClearDay } from "../layouts/WeatherIcons";
 
 interface IToDatSunRiseAndSetProps {
   backGround?: string;
@@ -17,9 +17,7 @@ function ToDaySunRiseAndSet({ backGround = "" }: IToDatSunRiseAndSetProps) {
       </div>
 
       {/* sun icon */}
-      <div>
-        <ClearDay />
-      </div>
+      <ClearDay />
 
       {/* Sunset */}
       <div className="space-x-3">

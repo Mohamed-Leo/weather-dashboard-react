@@ -1,6 +1,6 @@
 import { RiCelsiusLine } from "react-icons/ri";
 import Switcher from "../layouts/Switcher";
-import { RainyIcon } from "./WeatherIcons";
+import { RainyIcon } from "../layouts/WeatherIcons";
 
 function WeatherDetailsCard() {
   return (

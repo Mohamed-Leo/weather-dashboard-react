@@ -1,5 +1,5 @@
 import HighlightBox from "./HighlightBox";
-import { UvIndex, Wind, WindyCloud } from "./WeatherIcons";
+import { UvIndex, Wind, WindyCloud } from "../layouts/WeatherIcons";
 
 const highlightListBoxes = [
   { title: "Chance of Rain", icon: <UvIndex width={60} height={60} /> },

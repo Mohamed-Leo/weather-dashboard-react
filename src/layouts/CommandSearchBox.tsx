@@ -1,41 +1,55 @@
+import CityItem from "@/components/CityItem";
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
-  CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { useWeatherStore } from "@/store";
+import { ICity, useWeatherStore } from "@/store";
 
 interface ICommandSearchBoxProps {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleItemSelect: (selectedItem: string) => void;
+  handleItemSelect: (city: ICity) => void;
   searchValue: string;
 }
 
 // suggestionsOptions
 const suggestionsOptions = [
   {
+    name: "Gaza",
+    country: "PS",
+    state: "Community of Madrid",
+    lon: 34.4667,
+    lat: 31.5,
+  },
+  {
     name: "Madrid",
     country: "ES",
     state: "Community of Madrid",
-    lat: 40.4167047,
-    lon: -3.7035825,
+    lon: -3.7026,
+    lat: 40.4165,
   },
   {
     name: "Barcelona",
     country: "ES",
     state: "Catalonia",
-    lat: 41.3828939,
-    lon: 2.1774322,
+    lon: 2.159,
+    lat: 41.3888,
   },
   {
     name: "Liverpool",
     country: "GB",
     state: "England",
-    lat: 53.4071991,
-    lon: -2.99168,
+    lon: -2.9779,
+    lat: 53.4106,
+  },
+  {
+    name: "Cairo",
+    country: "EG",
+    state: "Cairo",
+    lon: 31.2497,
+    lat: 30.0626,
   },
 ];
 
@@ -45,8 +59,7 @@ function CommandSearchBox({
   searchValue,
 }: ICommandSearchBoxProps) {
   // get the cities state from the store---
-  const cities = useWeatherStore((state) => state.cities);
-  console.log(cities);
+  const city = useWeatherStore((state) => state.city);
 
   return (
     <Command className="command-search-box bg-[#09090b] rounded-lg border shadow-md md:min-w-[450px] text-white">
@@ -60,29 +73,21 @@ function CommandSearchBox({
         <CommandEmpty>No results found.</CommandEmpty>
 
         <CommandGroup heading="Suggestions">
-          {suggestionsOptions.map((option, i) => (
-            <CommandItem
-              key={i}
-              className="text-gray-400 data-[selected=true]:bg-[#27272a] data-[selected=true]:text-white my-2"
-              onSelect={() => handleItemSelect(option.name)}
-            >
-              <span>{`${option.name}, ${option.state + "," || ","} ${option.country}`}</span>
-            </CommandItem>
-          ))}
-
-          {cities.map((city, i) => {
-            // destrucure city data----
-            const { name, country, state } = city;
-            return (
-              <CommandItem
-                key={i}
-                className="text-gray-400 data-[selected=true]:bg-[#27272a] data-[selected=true]:text-white"
-                onSelect={() => handleItemSelect(city.name)}
-              >
-                <span>{`${name}, ${state ? state + "," : ""} ${country}`}</span>
-              </CommandItem>
-            );
-          })}
+          {city.length !== 0
+            ? city.map((city) => (
+                <CityItem
+                  key={`${city.name}-${city.country}`}
+                  handleItemSelect={handleItemSelect}
+                  city={city}
+                />
+              ))
+            : suggestionsOptions.map((city, i) => (
+                <CityItem
+                  key={i}
+                  handleItemSelect={handleItemSelect}
+                  city={city}
+                />
+              ))}
         </CommandGroup>
       </CommandList>
     </Command>

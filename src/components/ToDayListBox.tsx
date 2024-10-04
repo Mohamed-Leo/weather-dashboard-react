@@ -1,5 +1,5 @@
 import ToDayBox from "./ToDayBox";
-import { PartlyCloudy } from "./WeatherIcons";
+import { PartlyCloudy } from "../layouts/WeatherIcons";
 
 interface IToDayBoxProps {
   backGround: string;

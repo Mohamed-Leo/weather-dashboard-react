@@ -4,8 +4,8 @@ import axios from "axios";
 import { useEffect } from "react";
 
 function useFetchCitiesData(citySearchValue: string) {
-  // get the setCities state from the store---
-  const setCities = useWeatherStore((state) => state.setCities);
+  // get the setCities from the store---
+  const setCity = useWeatherStore((state) => state.setCity);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -23,19 +23,20 @@ function useFetchCitiesData(citySearchValue: string) {
         if (data.length === 0) throw new Error("No cities found");
 
         // update the cities state in the store---
-        setCities(data);
+        setCity(data);
       } catch (error) {
         // check if error is not cancelled message---
         if (!axios.isCancel(error)) {
           console.error("Error fetching cities:", error);
-          setCities([]); // empty cities state in the store---
+          // empty cities state in the store---
+          setCity([]);
         }
       }
     };
 
     // check on cityValue before call the api and make sure to set the cities state back to empty array----
     if (!citySearchValue) {
-      setCities([]);
+      setCity([]);
       return;
     }
 
@@ -46,7 +47,7 @@ function useFetchCitiesData(citySearchValue: string) {
     return () => {
       controller.abort();
     };
-  }, [citySearchValue, setCities]);
+  }, [citySearchValue, setCity]);
 }
 
 export default useFetchCitiesData;

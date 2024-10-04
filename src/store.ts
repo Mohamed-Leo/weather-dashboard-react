@@ -8,12 +8,49 @@ export interface ICity {
   lon: number;
 }
 
+export interface IWeather {
+  weather: [
+    {
+      main: string;
+      description: string;
+    },
+  ];
+  base: string;
+  main: {
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    humidity: number;
+    sea_level: number;
+    grnd_level: number;
+  };
+  visibility: number;
+  wind: {
+    speed: number;
+    deg: number;
+  };
+  dt: number;
+  sys: {
+    country: string;
+    sunrise: number;
+    sunset: number;
+  };
+  name: string;
+}
+
 interface IWeatherStore {
-  cities: ICity[];
-  setCities: (cities: ICity[]) => void;
+  city: ICity[];
+  weatherData?: IWeather;
+  setCity: (city: ICity[]) => void;
+  setWeatherData: (fetchedWeatherData: IWeather) => void;
 }
 
 export const useWeatherStore = create<IWeatherStore>((set) => ({
-  cities: [],
-  setCities: (citiesData) => set({ cities: citiesData }),
+  city: [],
+  weatherData: undefined,
+  setCity: (fetchedCitiesData) => set({ city: fetchedCitiesData }),
+  setWeatherData: (fetchedWeatherData) =>
+    set({ weatherData: fetchedWeatherData }),
 }));

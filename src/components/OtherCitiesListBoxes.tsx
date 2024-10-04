@@ -1,4 +1,4 @@
-import { PartlyCloudy } from "./WeatherIcons";
+import { PartlyCloudy } from "../layouts/WeatherIcons";
 import CityBox from "./CityBox";
 
 const cities = [
