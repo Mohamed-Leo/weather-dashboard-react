@@ -11,12 +11,14 @@ export interface ICity {
 export interface IWeather {
   weather: [
     {
+      id: number;
       main: string;
       description: string;
+      icon: string;
     },
   ];
-  base: string;
-  main: {
+  base?: string;
+  main?: {
     temp: number;
     feels_like: number;
     temp_min: number;
@@ -26,13 +28,13 @@ export interface IWeather {
     sea_level: number;
     grnd_level: number;
   };
-  visibility: number;
-  wind: {
+  visibility?: number;
+  wind?: {
     speed: number;
     deg: number;
   };
-  dt: number;
-  sys: {
+  dt?: number;
+  sys?: {
     country: string;
     sunrise: number;
     sunset: number;
@@ -42,7 +44,7 @@ export interface IWeather {
 
 interface IWeatherStore {
   city: ICity[];
-  weatherData?: IWeather;
+  weatherData: IWeather | undefined;
   setCity: (city: ICity[]) => void;
   setWeatherData: (fetchedWeatherData: IWeather) => void;
 }

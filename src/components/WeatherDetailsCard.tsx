@@ -1,14 +1,18 @@
 import { RiCelsiusLine } from "react-icons/ri";
 import Switcher from "../layouts/Switcher";
-import { RainyIcon } from "../layouts/WeatherIcons";
+import { useWeatherStore } from "@/store";
+import WeatherIcon from "./WeatherIcon";
 
 function WeatherDetailsCard() {
+  //  get hte weather data form the store----
+  const weatherData = useWeatherStore((state) => state.weatherData);
+
   return (
     <div className="weather-details-card flex flex-col gap-10 sm:gap-5 lg:gap-10 justify-between h-full p-4">
       {/* top part */}
       <div className="flex items-center gap-3 justify-between">
         <h1 className="2xl:text-7xl xl:text-4xl md:text-4xl text-3xl font-bold tracking-wider">
-          Cairo
+          {weatherData?.name}
         </h1>
         <Switcher />
       </div>
@@ -34,14 +38,19 @@ function WeatherDetailsCard() {
 
         {/* wather-icon-status */}
         <div className="text-center space-y-4 sm:text-left">
-          {/* weather-icon */}
+          {/* weather-icon (get the icon from custom weatherDataIconsByCode file by code)*/}
           <div className="scale-150 w-fit mx-auto">
-            <RainyIcon width={100} height={100} />
+            <WeatherIcon
+              id={weatherData?.weather[0].id}
+              iconName={weatherData?.weather[0].icon}
+            />
           </div>
 
           {/* wather-status */}
           <div className="space-y-1">
-            <p className="sm:text-3xl lg:text-2xl">Light Rain</p>
+            <p className="sm:text-3xl lg:text-2xl">
+              {weatherData?.weather[0].description}
+            </p>
             <p className="text-[13px] opacity-80">Feels Like 26</p>
           </div>
         </div>

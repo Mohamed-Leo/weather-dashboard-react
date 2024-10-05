@@ -12,23 +12,20 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useState } from "react";
 import useFetchCitiesData from "@/hooks/useFetchCitiesData";
 import { ICity } from "@/store";
-import useFetchWeatherBygeolocation from "@/hooks/useFetchWeatherBygeolocation";
+import useFetchWeatherByCity from "@/hooks/useFetchWeatherByCity";
 
 function SearchDialog() {
   const [isOpen, setIsOpen] = useState(false);
 
   const [searchValue, setSearchValue] = useState<string>("");
 
-  const [selectedCity, setSelectedCity] = useState({
-    lat: 30.0443879,
-    lon: 31.2357257,
-  });
+  const [selectedCity, setSelectedCity] = useState("cairo");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
 
-  const handleItemSelect = ({ lon, lat }: ICity) => {
+  const handleItemSelect = ({ name }: ICity) => {
     // update the search state value to empty---
     setSearchValue("");
 
@@ -36,17 +33,17 @@ function SearchDialog() {
     setIsOpen(false);
 
     // update the selectedCity by the choosen city from the CityItemBox---
-    setSelectedCity({
-      lat: lat,
-      lon: lon,
-    });
+    setSelectedCity(name);
   };
 
   // call the api function with searchValue argument to fetch the cities data---------------------
   useFetchCitiesData(searchValue);
 
-  // fetch the weahter data for the choosen city by location---
-  useFetchWeatherBygeolocation(selectedCity);
+  /*
+   * fetch the weahter data for the choosen city by city name
+   * there is an issue when fetch by geolocation (lon and lat) with the openweather api coz it's rounding the lon and lat numbers
+   */
+  useFetchWeatherByCity(selectedCity);
 
   return (
     <div className="search-box w-full sm:w-fit">
