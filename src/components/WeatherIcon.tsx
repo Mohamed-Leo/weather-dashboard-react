@@ -1,8 +1,8 @@
 import weatherDataIconsByCode from "@/constants/weatherDataIconsByCode";
 
 interface IWeatherIconProps {
-  id: number | undefined;
-  iconName: string | undefined;
+  id: number;
+  iconName: string;
 }
 
 function WeatherIcon({ id, iconName }: IWeatherIconProps) {
@@ -11,7 +11,9 @@ function WeatherIcon({ id, iconName }: IWeatherIconProps) {
       {weatherDataIconsByCode.map(
         (item) =>
           item.code === id && (
-            <div key={id}>{item.icon(100, 100, iconName)}</div>
+            <div className="scale-150 w-fit mx-auto" key={id}>
+              {item.icon(100, 100, iconName)}
+            </div>
           ),
       )}
     </>

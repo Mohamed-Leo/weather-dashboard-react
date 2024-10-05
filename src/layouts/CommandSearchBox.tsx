@@ -19,7 +19,6 @@ const suggestionsOptions = [
   {
     name: "Gaza",
     country: "PS",
-    state: "Community of Madrid",
     lon: 34.4667,
     lat: 31.5,
   },

@@ -1,6 +1,7 @@
 import OtherOptionsIcons from "./OtherOptionsIcons";
 import SearchDialog from "./SearchDialog";
 import ThemeSwitch from "./ThemeSwitch";
+import TimerClock from "./TimerClock";
 
 function Header() {
   return (
@@ -8,8 +9,10 @@ function Header() {
       {/* search-icons(location)-box */}
       <div className="rounded-md transition-colors duration-300 ease-in-out flex gap-3 items-center flex-wrap justify-center w-full sm:w-fit">
         <SearchDialog />
-        {/* OtherOptionsIcons */}
+        {/* OtherOptionsIcons for the other icons of tools like location */}
         <OtherOptionsIcons />
+        {/* timer (clock) */}
+        <TimerClock />
       </div>
 
       <ThemeSwitch />

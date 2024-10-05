@@ -3,19 +3,17 @@ import ToDayWeekWeatherBox from "./ToDayWeekWeatherBox";
 import WeatherDetailsCard from "./WeatherDetailsCard";
 import HighlightListBoxes from "./HighlightListBoxes";
 import OtherCitiesListBoxes from "./OtherCitiesListBoxes";
-
-// main contentBoxes
-// const contentBoxes = [
-//     {}
-// ];
+// import { Skeleton } from "@/components/ui/skeleton";
 
 function MainContent() {
   return (
     <main className="container select-none px-5 sm:px-0 mt-10 sm:mt-5 grid gap-y-10 md:grid-cols-2 sm:grid-cols-1 lg:gap-x-20 md:gap-x-16 md:gap-y-8 lg:md:gap-y-8 sm:gap-y-10 text-white">
       {/* weatherBox */}
+      {/* <Skeleton> */}
       <Box backGround="bg-[#0e1421]" hasPadding={true}>
         <WeatherDetailsCard />
       </Box>
+      {/* </Skeleton> */}
 
       {/* Today Highlight weatherBox */}
       <Box

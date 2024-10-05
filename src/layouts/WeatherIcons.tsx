@@ -319,9 +319,9 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -331,9 +331,9 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
         y2="46.52"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#86c3db" />
-        <stop offset=".45" stop-color="#86c3db" />
-        <stop offset="1" stop-color="#5eafcf" />
+        <stop offset="0" stopColor="#86c3db" />
+        <stop offset=".45" stopColor="#86c3db" />
+        <stop offset="1" stopColor="#5eafcf" />
       </linearGradient>
       <linearGradient
         id="d"
@@ -367,9 +367,9 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
         y2="46.7"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#4286ee" />
-        <stop offset=".45" stop-color="#4286ee" />
-        <stop offset="1" stop-color="#0950bc" />
+        <stop offset="0" stopColor="#4286ee" />
+        <stop offset=".45" stopColor="#4286ee" />
+        <stop offset="1" stopColor="#0950bc" />
       </linearGradient>
       <linearGradient
         id="g"
@@ -391,7 +391,7 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
     <path
       fill="url(#c)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -402,13 +402,13 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
         r="1.25"
         fill="none"
         stroke="url(#a)"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         fill="none"
         stroke="url(#d)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M26.17 46.25l-1.09-.63m-2.16-1.24l-1.09-.63M24 42.5v1.25m0 3.75v-1.25m-1.08-.63l-1.09.63m4.34-2.5l-1.09.63"
       />
       <animateTransform
@@ -443,13 +443,13 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
         r="1.25"
         fill="none"
         stroke="url(#e)"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         fill="none"
         stroke="url(#f)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M40.17 46.25l-1.09-.63m-2.16-1.24l-1.09-.63M38 42.5v1.25m0 3.75v-1.25m-1.08-.63l-1.09.63m4.34-2.5l-1.09.63"
       />
       <animateTransform
@@ -481,7 +481,7 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
       fill="none"
       stroke="url(#b)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M24.08 45.01l-.16.98"
     >
@@ -503,7 +503,7 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
       fill="none"
       stroke="url(#g)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M31.08 45.01l-.16.98"
     >
@@ -527,7 +527,7 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
       fill="none"
       stroke="url(#h)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M38.08 45.01l-.16.98"
     >
@@ -927,7 +927,7 @@ export const ThunderStormDay = ({ width = 50, height = 50 }) => (
     </path>
     <path
       className="shape-stroke"
-      fill="url(#b)"
+      fill="#f3f7fe"
       stroke="#e6effc"
       strokeMiterlimit="10"
       strokeWidth=".5"
@@ -968,9 +968,9 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -980,9 +980,9 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
         y2="48.05"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#4286ee" />
-        <stop offset=".45" stop-color="#4286ee" />
-        <stop offset="1" stop-color="#0950bc" />
+        <stop offset="0" stopColor="#4286ee" />
+        <stop offset=".45" stopColor="#4286ee" />
+        <stop offset="1" stopColor="#0950bc" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -1008,15 +1008,15 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
         y2="53.52"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f7b23b" />
-        <stop offset=".45" stop-color="#f7b23b" />
-        <stop offset="1" stop-color="#f59e0b" />
+        <stop offset="0" stopColor="#f7b23b" />
+        <stop offset=".45" stopColor="#f7b23b" />
+        <stop offset="1" stopColor="#f59e0b" />
       </linearGradient>
     </defs>
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -1024,7 +1024,7 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#a)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M24.39 43.03l-.78 4.94"
     >
@@ -1046,7 +1046,7 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#c)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M31.39 43.03l-.78 4.94"
     >
@@ -1070,7 +1070,7 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#d)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M38.39 43.03l-.78 4.94"
     >
@@ -1093,7 +1093,7 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#e)"
       stroke="#f6a823"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M30 36l-4 12h4l-2 10 10-14h-6l4-8h-6z"
     >
@@ -1124,9 +1124,9 @@ export const ThunderStormLight = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="b"
@@ -1136,22 +1136,22 @@ export const ThunderStormLight = ({ width = 50, height = 50 }) => (
         y2="53.52"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f7b23b" />
-        <stop offset=".45" stop-color="#f7b23b" />
-        <stop offset="1" stop-color="#f59e0b" />
+        <stop offset="0" stopColor="#f7b23b" />
+        <stop offset=".45" stopColor="#f7b23b" />
+        <stop offset="1" stopColor="#f59e0b" />
       </linearGradient>
     </defs>
     <path
       fill="url(#a)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
     <path
       fill="url(#b)"
       stroke="#f6a823"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M30 36l-4 12h4l-2 10 10-14h-6l4-8h-6z"
     >
@@ -1412,9 +1412,9 @@ export const DrizzleHeavy = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -1424,9 +1424,9 @@ export const DrizzleHeavy = ({ width = 50, height = 50 }) => (
         y2="46.3"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#86c3db" />
-        <stop offset=".45" stop-color="#86c3db" />
-        <stop offset="1" stop-color="#5eafcf" />
+        <stop offset="0" stopColor="#86c3db" />
+        <stop offset=".45" stopColor="#86c3db" />
+        <stop offset="1" stopColor="#5eafcf" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -1448,7 +1448,7 @@ export const DrizzleHeavy = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -1522,9 +1522,9 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
         y2="28.33"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fbbf24" />
-        <stop offset=".45" stop-color="#fbbf24" />
-        <stop offset="1" stop-color="#f59e0b" />
+        <stop offset="0" stopColor="#fbbf24" />
+        <stop offset=".45" stopColor="#fbbf24" />
+        <stop offset="1" stopColor="#f59e0b" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -1534,9 +1534,9 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -1546,9 +1546,9 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
         y2="46.7"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#4286ee" />
-        <stop offset=".45" stop-color="#4286ee" />
-        <stop offset="1" stop-color="#0950bc" />
+        <stop offset="0" stopColor="#4286ee" />
+        <stop offset=".45" stopColor="#4286ee" />
+        <stop offset="1" stopColor="#0950bc" />
       </linearGradient>
       <linearGradient
         id="d"
@@ -1573,14 +1573,14 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
       r="5"
       fill="url(#b)"
       stroke="#f8af18"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
     />
     <path
       fill="none"
       stroke="#fbbf24"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M19 15.67V12.5m0 23v-3.17m5.89-14.22l2.24-2.24M10.87 32.13l2.24-2.24m0-11.78l-2.24-2.24m16.26 16.26l-2.24-2.24M7.5 24h3.17m19.83 0h-3.17"
     >
@@ -1595,7 +1595,7 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#c)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -1603,7 +1603,7 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#a)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M24.08 45.01l-.16.98"
     >
@@ -1625,7 +1625,7 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#d)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M31.08 45.01l-.16.98"
     >
@@ -1649,7 +1649,7 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#e)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M38.08 45.01l-.16.98"
     >
@@ -1690,9 +1690,9 @@ export const Snow = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -1702,9 +1702,9 @@ export const Snow = ({ width = 50, height = 50 }) => (
         y2="46.52"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#86c3db" />
-        <stop offset=".45" stop-color="#86c3db" />
-        <stop offset="1" stop-color="#5eafcf" />
+        <stop offset="0" stopColor="#86c3db" />
+        <stop offset=".45" stopColor="#86c3db" />
+        <stop offset="1" stopColor="#5eafcf" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -1750,7 +1750,7 @@ export const Snow = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -1761,13 +1761,13 @@ export const Snow = ({ width = 50, height = 50 }) => (
         r="1.25"
         fill="none"
         stroke="url(#a)"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         fill="none"
         stroke="url(#c)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M33.17 46.25l-1.09-.63m-2.16-1.24l-1.09-.63M31 42.5v1.25m0 3.75v-1.25m-1.08-.63l-1.09.63m4.34-2.5l-1.09.63"
       />
       <animateTransform
@@ -1800,13 +1800,13 @@ export const Snow = ({ width = 50, height = 50 }) => (
         r="1.25"
         fill="none"
         stroke="url(#d)"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         fill="none"
         stroke="url(#e)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M26.17 46.25l-1.09-.63m-2.16-1.24l-1.09-.63M24 42.5v1.25m0 3.75v-1.25m-1.08-.63l-1.09.63m4.34-2.5l-1.09.63"
       />
       <animateTransform
@@ -1841,13 +1841,13 @@ export const Snow = ({ width = 50, height = 50 }) => (
         r="1.25"
         fill="none"
         stroke="url(#f)"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <path
         fill="none"
         stroke="url(#g)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M40.17 46.25l-1.09-.63m-2.16-1.24l-1.09-.63M38 42.5v1.25m0 3.75v-1.25m-1.08-.63l-1.09.63m4.34-2.5l-1.09.63"
       />
       <animateTransform
@@ -1896,9 +1896,9 @@ export const Mist = ({ width = 50, height = 50 }) => (
         y2="32.79"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#d4d7dd" />
-        <stop offset=".45" stop-color="#d4d7dd" />
-        <stop offset="1" stop-color="#bec1c6" />
+        <stop offset="0" stopColor="#d4d7dd" />
+        <stop offset=".45" stopColor="#d4d7dd" />
+        <stop offset="1" stopColor="#bec1c6" />
       </linearGradient>
       <linearGradient id="b" y1="24.21" y2="39.79" xlinkHref="#a" />
       <linearGradient id="c" y1="31.21" y2="46.79" xlinkHref="#a" />
@@ -1907,7 +1907,7 @@ export const Mist = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#a)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 25h30"
     >
@@ -1924,7 +1924,7 @@ export const Mist = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#b)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 32h30"
     >
@@ -1941,7 +1941,7 @@ export const Mist = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#c)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 39h30"
     >
@@ -1975,9 +1975,9 @@ export const Smoke = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -1987,9 +1987,9 @@ export const Smoke = ({ width = 50, height = 50 }) => (
         y2="53.6"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#b8bdc6" />
-        <stop offset=".45" stop-color="#b8bdc6" />
-        <stop offset="1" stop-color="#a5aab2" />
+        <stop offset="0" stopColor="#b8bdc6" />
+        <stop offset=".45" stopColor="#b8bdc6" />
+        <stop offset="1" stopColor="#a5aab2" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -2011,7 +2011,7 @@ export const Smoke = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -2021,7 +2021,7 @@ export const Smoke = ({ width = 50, height = 50 }) => (
       r="3"
       fill="url(#a)"
       stroke="#afb4bc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
     >
       <animateTransform
@@ -2050,7 +2050,7 @@ export const Smoke = ({ width = 50, height = 50 }) => (
       r="4.5"
       fill="url(#c)"
       stroke="#afb4bc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
     >
       <animateTransform
@@ -2089,7 +2089,7 @@ export const Smoke = ({ width = 50, height = 50 }) => (
       r="6"
       fill="url(#d)"
       stroke="#afb4bc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
     >
       <animateTransform
@@ -2143,9 +2143,9 @@ export const Haze = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -2155,9 +2155,9 @@ export const Haze = ({ width = 50, height = 50 }) => (
         y2="71.32"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#d4d7dd" />
-        <stop offset=".45" stop-color="#d4d7dd" />
-        <stop offset="1" stop-color="#bec1c6" />
+        <stop offset="0" stopColor="#d4d7dd" />
+        <stop offset=".45" stopColor="#d4d7dd" />
+        <stop offset="1" stopColor="#bec1c6" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -2203,7 +2203,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -2212,7 +2212,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#a)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M17 58h4.5"
       />
@@ -2221,7 +2221,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         stroke="url(#c)"
         stroke-dasharray="7 7"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M28.5 58H39"
       />
@@ -2229,7 +2229,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#d)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M42.5 58H47"
       />
@@ -2247,7 +2247,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#e)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M17 52h4.5"
       />
@@ -2256,7 +2256,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         stroke="url(#f)"
         stroke-dasharray="7 7"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M28.5 52H39"
       />
@@ -2264,7 +2264,7 @@ export const Haze = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#g)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M42.5 52H47"
       />
@@ -2298,9 +2298,9 @@ export const Dust = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -2310,9 +2310,9 @@ export const Dust = ({ width = 50, height = 50 }) => (
         y2="45.32"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fde68a" />
-        <stop offset=".45" stop-color="#fde68a" />
-        <stop offset="1" stop-color="#fde171" />
+        <stop offset="0" stopColor="#fde68a" />
+        <stop offset=".45" stopColor="#fde68a" />
+        <stop offset="1" stopColor="#fde171" />
       </linearGradient>
       <linearGradient
         id="d"
@@ -2362,7 +2362,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
       <path
         fill="url(#c)"
         stroke="#e6effc"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth=".5"
         d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
       />
@@ -2372,7 +2372,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#a)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M24.89 45.11l3.19-3.19"
       />
@@ -2381,7 +2381,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         stroke="url(#d)"
         stroke-dasharray="7 7"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M33.03 36.97l7.42-7.42"
       />
@@ -2389,7 +2389,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#e)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M42.92 27.08l3.19-3.19"
       />
@@ -2406,7 +2406,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#f)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M34.89 45.11l3.19-3.19"
       />
@@ -2415,7 +2415,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         stroke="url(#g)"
         stroke-dasharray="7 7"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M43.03 36.97l7.42-7.42"
       />
@@ -2423,7 +2423,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         fill="none"
         stroke="url(#h)"
         strokeLinecap="round"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         strokeWidth="3"
         d="M52.92 27.08l3.19-3.19"
       />
@@ -2457,9 +2457,9 @@ export const Fog = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
       <linearGradient
         id="a"
@@ -2469,16 +2469,16 @@ export const Fog = ({ width = 50, height = 50 }) => (
         y2="65.79"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#d4d7dd" />
-        <stop offset=".45" stop-color="#d4d7dd" />
-        <stop offset="1" stop-color="#bec1c6" />
+        <stop offset="0" stopColor="#d4d7dd" />
+        <stop offset=".45" stopColor="#d4d7dd" />
+        <stop offset="1" stopColor="#bec1c6" />
       </linearGradient>
       <linearGradient id="c" y1="44.21" y2="59.79" xlinkHref="#a" />
     </defs>
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     />
@@ -2486,7 +2486,7 @@ export const Fog = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#a)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 58h30"
     >
@@ -2503,7 +2503,7 @@ export const Fog = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#c)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 52h30"
     >
@@ -2537,9 +2537,9 @@ export const Tornado = ({ width = 50, height = 50 }) => (
         y2="27.79"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#d4d7dd" />
-        <stop offset=".45" stop-color="#d4d7dd" />
-        <stop offset="1" stop-color="#bec1c6" />
+        <stop offset="0" stopColor="#d4d7dd" />
+        <stop offset=".45" stopColor="#d4d7dd" />
+        <stop offset="1" stopColor="#bec1c6" />
       </linearGradient>
       <linearGradient
         id="b"
@@ -2578,7 +2578,7 @@ export const Tornado = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#a)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M17 20h30"
     >
@@ -2594,7 +2594,7 @@ export const Tornado = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#b)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M19 26h26"
     >
@@ -2611,7 +2611,7 @@ export const Tornado = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#c)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M21.5 32h21"
     >
@@ -2628,7 +2628,7 @@ export const Tornado = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#d)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M24 38h16"
     >
@@ -2645,7 +2645,7 @@ export const Tornado = ({ width = 50, height = 50 }) => (
       fill="none"
       stroke="url(#e)"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="3"
       d="M28 44h8"
     >
@@ -2678,15 +2678,15 @@ export const Cloudy = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
     </defs>
     <path
       fill="url(#a)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     >
@@ -2718,9 +2718,9 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
         y2="28.33"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fbbf24" />
-        <stop offset=".45" stop-color="#fbbf24" />
-        <stop offset="1" stop-color="#f59e0b" />
+        <stop offset="0" stopColor="#fbbf24" />
+        <stop offset=".45" stopColor="#fbbf24" />
+        <stop offset="1" stopColor="#f59e0b" />
       </linearGradient>
       <linearGradient
         id="b"
@@ -2730,9 +2730,9 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
         y2="40.46"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#9ca3af" />
-        <stop offset=".45" stop-color="#9ca3af" />
-        <stop offset="1" stop-color="#6b7280" />
+        <stop offset="0" stopColor="#9ca3af" />
+        <stop offset=".45" stopColor="#9ca3af" />
+        <stop offset="1" stopColor="#6b7280" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -2742,9 +2742,9 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
     </defs>
     <circle
@@ -2753,14 +2753,14 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
       r="5"
       fill="url(#a)"
       stroke="#f8af18"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
     />
     <path
       fill="none"
       stroke="#fbbf24"
       strokeLinecap="round"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth="2"
       d="M19 15.67V12.5m0 23v-3.17m5.89-14.22l2.24-2.24M10.87 32.13l2.24-2.24m0-11.78l-2.24-2.24m16.26 16.26l-2.24-2.24M7.5 24h3.17m19.83 0h-3.17"
     >
@@ -2775,7 +2775,7 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#848b98"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M34.23 33.45a4.05 4.05 0 004.05 4h16.51a4.34 4.34 0 00.81-8.61 3.52 3.52 0 00.06-.66 4.06 4.06 0 00-6.13-3.48 6.08 6.08 0 00-11.25 3.19 6.34 6.34 0 00.18 1.46h-.18a4.05 4.05 0 00-4.05 4.1z"
     >
@@ -2790,7 +2790,7 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#c)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     >
@@ -2822,9 +2822,9 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
         y2="33.87"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#86c3db" />
-        <stop offset=".45" stop-color="#86c3db" />
-        <stop offset="1" stop-color="#5eafcf" />
+        <stop offset="0" stopColor="#86c3db" />
+        <stop offset=".45" stopColor="#86c3db" />
+        <stop offset="1" stopColor="#5eafcf" />
         <animateTransform
           attributeName="gradientTransform"
           dur="10s"
@@ -2841,9 +2841,9 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
         y2="40.46"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#9ca3af" />
-        <stop offset=".45" stop-color="#9ca3af" />
-        <stop offset="1" stop-color="#6b7280" />
+        <stop offset="0" stopColor="#9ca3af" />
+        <stop offset=".45" stopColor="#9ca3af" />
+        <stop offset="1" stopColor="#6b7280" />
       </linearGradient>
       <linearGradient
         id="c"
@@ -2853,9 +2853,9 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
     </defs>
     <path
@@ -2877,7 +2877,7 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#848b98"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M34.23 33.45a4.05 4.05 0 004.05 4h16.51a4.34 4.34 0 00.81-8.61 3.52 3.52 0 00.06-.66 4.06 4.06 0 00-6.13-3.48 6.08 6.08 0 00-11.25 3.19 6.34 6.34 0 00.18 1.46h-.18a4.05 4.05 0 00-4.05 4.1z"
     >
@@ -2892,7 +2892,7 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#c)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     >
@@ -2924,9 +2924,9 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
         y2="40.46"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#9ca3af" />
-        <stop offset=".45" stop-color="#9ca3af" />
-        <stop offset="1" stop-color="#6b7280" />
+        <stop offset="0" stopColor="#9ca3af" />
+        <stop offset=".45" stopColor="#9ca3af" />
+        <stop offset="1" stopColor="#6b7280" />
       </linearGradient>
       <linearGradient
         id="b"
@@ -2936,15 +2936,15 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
         y2="50.8"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f3f7fe" />
-        <stop offset=".45" stop-color="#f3f7fe" />
-        <stop offset="1" stop-color="#deeafb" />
+        <stop offset="0" stopColor="#f3f7fe" />
+        <stop offset=".45" stopColor="#f3f7fe" />
+        <stop offset="1" stopColor="#deeafb" />
       </linearGradient>
     </defs>
     <path
       fill="url(#a)"
       stroke="#848b98"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M34.23 33.45a4.05 4.05 0 004.05 4h16.51a4.34 4.34 0 00.81-8.61 3.52 3.52 0 00.06-.66 4.06 4.06 0 00-6.13-3.48 6.08 6.08 0 00-11.25 3.19 6.34 6.34 0 00.18 1.46h-.18a4.05 4.05 0 00-4.05 4.1z"
     >
@@ -2959,7 +2959,7 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
     <path
       fill="url(#b)"
       stroke="#e6effc"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeWidth=".5"
       d="M46.5 31.5h-.32a10.49 10.49 0 00-19.11-8 7 7 0 00-10.57 6 7.21 7.21 0 00.1 1.14A7.5 7.5 0 0018 45.5a4.19 4.19 0 00.5 0v0h28a7 7 0 000-14z"
     >

@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 export interface ICity {
   name: string;
-  state: string;
+  state?: string;
   country: string;
   lat: number;
   lon: number;
@@ -17,8 +17,8 @@ export interface IWeather {
       icon: string;
     },
   ];
-  base?: string;
-  main?: {
+  base: string;
+  main: {
     temp: number;
     feels_like: number;
     temp_min: number;
@@ -28,13 +28,14 @@ export interface IWeather {
     sea_level: number;
     grnd_level: number;
   };
-  visibility?: number;
-  wind?: {
+  timezone: number;
+  visibility: number;
+  wind: {
     speed: number;
     deg: number;
   };
-  dt?: number;
-  sys?: {
+  dt: number;
+  sys: {
     country: string;
     sunrise: number;
     sunset: number;

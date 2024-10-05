@@ -7,7 +7,7 @@ const options = [{ title: "location", icon: <IoLocation fontSize={20} /> }];
 function OtherOptionsIcons() {
   // handleClick---
   const handleClick = (title: string) => {
-    // check on title to treeger the right function--
+    // check on title to tregger the right function like (fetching location)--
     if (title === "location") console.log("fetch by location", title);
   };
 
