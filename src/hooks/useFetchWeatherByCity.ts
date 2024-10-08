@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 function useFetchWeatherByCity(name: string) {
   // get the setWeatherData from the store---
-  const { setWeatherData } = useWeatherStore();
+  const setWeatherData = useWeatherStore((state) => state.setWeatherData);
 
   useEffect(() => {
     const controller = new AbortController();

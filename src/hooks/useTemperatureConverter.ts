@@ -6,9 +6,9 @@ type TemperatureUnit = "celsius" | "fahrenheit";
 
 interface TemperatureData {
   temp: number;
-  feels_like: number;
-  temp_min: number;
-  temp_max: number;
+  feels_like?: number;
+  temp_min?: number;
+  temp_max?: number;
 }
 
 interface ConvertedTemperatures {
@@ -21,6 +21,9 @@ interface ConvertedTemperatures {
 function useTemperatureConverter(kelvinTemp: TemperatureData) {
   const [unit, setUnit] = useState<TemperatureUnit>("celsius");
 
+  // destructure kelvinTemp data -----
+  const { temp, feels_like, temp_max, temp_min } = kelvinTemp;
+
   // tempIcon---
   const tempIcon = useConvertedTempIcon(unit);
 
@@ -29,12 +32,12 @@ function useTemperatureConverter(kelvinTemp: TemperatureData) {
     const converter = unit === "celsius" ? kelvinToCelsius : kelvinToFahrenheit;
 
     return {
-      temp: converter(kelvinTemp.temp),
-      feels_like: converter(kelvinTemp.feels_like),
-      temp_min: converter(kelvinTemp.temp_min),
-      temp_max: converter(kelvinTemp.temp_max),
+      temp: converter(temp),
+      feels_like: converter(feels_like as number),
+      temp_min: converter(temp_min as number),
+      temp_max: converter(temp_max as number),
     };
-  }, [kelvinTemp, unit]);
+  }, [temp, feels_like, temp_max, temp_min, unit]);
 
   const toggleUnit = () =>
     setUnit((prev) => (prev === "celsius" ? "fahrenheit" : "celsius"));

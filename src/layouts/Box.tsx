@@ -30,7 +30,7 @@ function Box({
     <div
       className={`box ${colSpan}${theme === "dark" ? backGround : `${backGround ? "bg-white" : ""}`} rounded-2xl ${hasPadding ? "p-4" : ""} space-y-4`}
     >
-      {title && <h3>{title}</h3>}
+      {title && <h3 className="text-center">{title}</h3>}
 
       <div
         className={`${isFlex ? "flex flex-col items-center justify-center" : isGrid ? "grid grid-cols-2 gap-5" : ""} ${title ? "h-[calc(100%-40px)]" : "h-full"}`}

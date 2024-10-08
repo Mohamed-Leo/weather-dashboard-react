@@ -41,7 +41,8 @@ function SearchDialog() {
 
   /*
    * fetch the weahter data for the choosen city by city name
-   * there is an issue when fetch by geolocation (lon and lat) with the openweather api coz it's rounding the lon and lat numbers
+    there is an issue when fetch by geolocation (lon and lat) with the openweather api coz it's
+    rounding the lon and lat numbers
    */
   useFetchWeatherByCity(selectedCity);
 

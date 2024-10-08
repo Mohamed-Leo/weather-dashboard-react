@@ -1,29 +1,50 @@
 import ToDayBox from "./ToDayBox";
-import { PartlyCloudy } from "../layouts/WeatherIcons";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { IWeatherForecast } from "@/store";
+import useGetToDayForeCast from "@/hooks/useGetToDayForeCast";
 
 interface IToDayBoxProps {
   backGround: string;
+  foreCastFivedays: IWeatherForecast;
 }
 
-// today times array----
-const toDayTimes = [
-  { time: "1 pm", weatherStatus: <PartlyCloudy />, temp: `20°` },
-  { time: "2 pm", weatherStatus: <PartlyCloudy />, temp: `21°` },
-  { time: "3 pm", weatherStatus: <PartlyCloudy />, temp: `19°` },
-  { time: "4 pm", weatherStatus: <PartlyCloudy />, temp: `30°` },
-  { time: "5 pm", weatherStatus: <PartlyCloudy />, temp: `25°` },
-  { time: "6 pm", weatherStatus: <PartlyCloudy />, temp: `28°` },
-  { time: "7 pm", weatherStatus: <PartlyCloudy />, temp: `24°` },
-];
+function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
+  // get today forecast by using the useGetToDayForeCast custom hook---
+  const toDayForeCast = useGetToDayForeCast(foreCastFivedays);
 
-function ToDayListBox({ backGround = "" }: IToDayBoxProps) {
+  // plugin for Carousel----
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
+  );
+
   return (
     <div
-      className={`today-list-boxes flex gap-3 lg:gap-1 flex-wrap justify-center ${backGround} p-5 rounded-3xl`}
+      className={`today-list-boxes w-full flex gap-3 lg:gap-1 flex-wrap justify-center ${backGround} p-5 rounded-3xl`}
     >
-      {toDayTimes.map((today, index) => (
-        <ToDayBox key={index} todayData={today} />
-      ))}
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full max-w-56 sm:max-w-sm md:max-w-60 lg:max-w-sm xl:max-w-md"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent>
+          {toDayForeCast.map((todayCast) => (
+            <CarouselItem
+              key={todayCast.dt_txt}
+              className="basis-1/3 lg:basis-1/3"
+            >
+              <ToDayBox key={todayCast.dt_txt} todayForeCastData={todayCast} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 }

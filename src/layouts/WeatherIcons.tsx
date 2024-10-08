@@ -61,7 +61,7 @@ export const Rainy = ({ width = 50, height = 50 }) => (
     />
     <path
       fill="none"
-      stroke="url(#a)"
+      stroke="#e6effc"
       strokeLinecap="round"
       strokeMiterlimit="10"
       strokeWidth="2"
@@ -213,6 +213,7 @@ export const RainyHeaviy = ({ width = 100, height = 50 }) => (
     </path>
     {/* Lower cloud */}
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -389,6 +390,7 @@ export const RainySnowy = ({ width = 100, height = 50 }) => (
       />
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#c)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -634,7 +636,8 @@ export const WindyCloud = ({ width = 50, height = 50 }) => (
         </linearGradient>
       </defs>
       <path
-        fill="#fff"
+        className="shape-stroke"
+        fill="#e6effc"
         stroke="#e6effc"
         strokeMiterlimit="10"
         strokeWidth=".5"
@@ -1014,6 +1017,7 @@ export const ThunderStormLigthRain = ({ width = 50, height = 50 }) => (
       </linearGradient>
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -1142,6 +1146,7 @@ export const ThunderStormLight = ({ width = 50, height = 50 }) => (
       </linearGradient>
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#a)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -1245,7 +1250,7 @@ export const ClearNight = ({ width = 50, height = 50 }) => (
       </linearGradient>
     </defs>
     <path
-      fill="url(#a)"
+      fill="#72b9d5"
       stroke="#72b9d5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -1315,6 +1320,7 @@ export const Drizzle = ({ width = 50, height = 50 }) => (
       />
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -1446,6 +1452,7 @@ export const DrizzleHeavy = ({ width = 50, height = 50 }) => (
       />
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -1593,6 +1600,7 @@ export const DrizzleRain = ({ width = 50, height = 50 }) => (
       />
     </path>
     <path
+      className="shape-stroke"
       fill="url(#c)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -1748,6 +1756,7 @@ export const Snow = ({ width = 50, height = 50 }) => (
       />
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -2009,6 +2018,7 @@ export const Smoke = ({ width = 50, height = 50 }) => (
       />
     </defs>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -2358,7 +2368,7 @@ export const Dust = ({ width = 50, height = 50 }) => (
         <path fill="none" d="M7.5 7.5h47l-47 47v-47z" />
       </clipPath>
     </defs>
-    <g clip-path="url(#b)">
+    <g clipPath="url(#b)">
       <path
         fill="url(#c)"
         stroke="#e6effc"
@@ -2684,7 +2694,8 @@ export const Cloudy = ({ width = 50, height = 50 }) => (
       </linearGradient>
     </defs>
     <path
-      fill="url(#a)"
+      className="shape-stroke"
+      fill="#e6effc"
       stroke="#e6effc"
       strokeMiterlimit="10"
       strokeWidth=".5"
@@ -2788,6 +2799,7 @@ export const CloudyDay = ({ width = 50, height = 50 }) => (
       />
     </path>
     <path
+      className="shape-stroke"
       fill="url(#c)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -2890,6 +2902,7 @@ export const CloudyNight = ({ width = 50, height = 50 }) => (
       />
     </path>
     <path
+      className="shape-stroke"
       fill="url(#c)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -2957,6 +2970,7 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
       />
     </path>
     <path
+      className="shape-stroke"
       fill="url(#b)"
       stroke="#e6effc"
       strokeMiterlimit="10"
@@ -2971,5 +2985,127 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
         values="-3 0; 3 0; -3 0"
       />
     </path>
+  </svg>
+);
+
+export const SunRise = ({ width = 50, height = 50 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    className="mx-auto"
+    width={width}
+    height={height}
+  >
+    <defs>
+      <linearGradient
+        id="b"
+        x1="26.75"
+        x2="37.25"
+        y1="29.91"
+        y2="48.09"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#fbbf24" />
+        <stop offset=".45" stopColor="#fbbf24" />
+        <stop offset="1" stopColor="#f59e0b" />
+      </linearGradient>
+      <clipPath id="a">
+        <path fill="none" d="M0 7.5h64v32H0z" />
+      </clipPath>
+    </defs>
+    <g strokeMiterlimit="10" clipPath="url(#a)">
+      <circle
+        cx="32"
+        cy="39"
+        r="10.5"
+        fill="#fbbf24"
+        stroke="#f8af18"
+        strokeWidth=".5"
+      />
+      <path
+        fill="none"
+        stroke="#fbbf24"
+        strokeLinecap="round"
+        strokeWidth="3"
+        d="M32 22.71V16.5m0 45v-6.21m11.52-27.81l4.39-4.39M16.09 54.91l4.39-4.39m0-23l-4.39-4.39m31.82 31.78l-4.39-4.39M15.71 39H9.5m45 0h-6.21"
+      >
+        <animateTransform
+          attributeName="transform"
+          dur="45s"
+          repeatCount="indefinite"
+          type="rotate"
+          values="0 32 39; 360 32 39"
+        />
+      </path>
+    </g>
+    <path
+      fill="none"
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M16 42.5h11l5-4.5 5 4.5h11"
+    />
+  </svg>
+);
+
+export const SunSet = ({ width = 50, height = 50 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    className="mx-auto"
+    width={width}
+    height={height}
+  >
+    <defs>
+      <linearGradient
+        id="b"
+        x1="26.75"
+        x2="37.25"
+        y1="29.91"
+        y2="48.09"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#fbbf24" />
+        <stop offset=".45" stopColor="#fbbf24" />
+        <stop offset="1" stopColor="#f59e0b" />
+      </linearGradient>
+      <clipPath id="a">
+        <path fill="none" d="M0 7.5h64v32H0z" />
+      </clipPath>
+    </defs>
+    <g strokeMiterlimit="10" clipPath="url(#a)">
+      <circle
+        cx="32"
+        cy="39"
+        r="10.5"
+        fill="#fbbf24"
+        stroke="#f8af18"
+        strokeWidth=".5"
+      />
+      <path
+        fill="none"
+        stroke="#fbbf24"
+        strokeLinecap="round"
+        strokeWidth="3"
+        d="M32 22.71V16.5m0 45v-6.21m11.52-27.81l4.39-4.39M16.09 54.91l4.39-4.39m0-23l-4.39-4.39m31.82 31.78l-4.39-4.39M15.71 39H9.5m45 0h-6.21"
+      >
+        <animateTransform
+          attributeName="transform"
+          dur="45s"
+          repeatCount="indefinite"
+          type="rotate"
+          values="0 32 39; 360 32 39"
+        />
+      </path>
+    </g>
+    <path
+      fill="none"
+      stroke="#374151"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M16 42.5h11l5 4.5 5-4.5h11"
+    />
   </svg>
 );

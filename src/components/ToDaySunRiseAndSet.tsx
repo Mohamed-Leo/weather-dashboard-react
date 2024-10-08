@@ -1,29 +1,43 @@
-import { ClearDay } from "../layouts/WeatherIcons";
+import { IWeather } from "@/store";
+import { SunRise, SunSet } from "../layouts/WeatherIcons";
+import useConvertUnixToTime from "@/hooks/useConvertUnixToTime";
 
 interface IToDatSunRiseAndSetProps {
   backGround?: string;
+  weatherData: IWeather;
 }
 
-function ToDaySunRiseAndSet({ backGround = "" }: IToDatSunRiseAndSetProps) {
+function ToDaySunRiseAndSet({
+  weatherData,
+  backGround = "",
+}: IToDatSunRiseAndSetProps) {
+  // use useConvertUnixToTime custom hook to get the right time--
+  const sunriseTime = useConvertUnixToTime(
+    weatherData?.sys.sunrise as number,
+    weatherData?.timezone as number,
+  );
+
+  const sunsetTime = useConvertUnixToTime(
+    weatherData?.sys.sunset as number,
+    weatherData?.timezone as number,
+  );
+
   return (
     <div
-      className={`today-sunrise-set-box ${backGround} justify-center p-3 rounded-lg flex-wrap flex sm:justify-between items-center gap-3`}
+      className={`today-sunrise-set-box ${backGround} justify-center md:justify-center items-center sm:justify-between p-3 rounded-lg flex-wrap flex lg:justify-between gap-3`}
     >
       {/* Sunrise */}
-      <div className="space-x-3">
+      <div className="space-x-3 text-center">
         <p className="text-center">Sunrise</p>
-        <span>6:45</span>
-        <span className="text-[#676b73]">AM</span>
+        <SunRise />
+        <span>{sunriseTime} AM</span>
       </div>
 
-      {/* sun icon */}
-      <ClearDay />
-
       {/* Sunset */}
-      <div className="space-x-3">
+      <div className="space-x-3 text-center">
         <p className="text-center">Sunset</p>
-        <span>5:30</span>
-        <span className="text-[#676b73]">PM</span>
+        <SunSet />
+        <span>{sunsetTime} PM</span>
       </div>
     </div>
   );

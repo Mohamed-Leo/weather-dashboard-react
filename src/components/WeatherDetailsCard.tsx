@@ -5,6 +5,7 @@ import Temperature from "./Temperature";
 import DateBox from "./DateBox";
 import useTemperatureConverter from "@/hooks/useTemperatureConverter";
 import WeatherStatus from "./WeatherStatus";
+import Loading from "@/layouts/Loading";
 
 function WeatherDetailsCard() {
   //  get hte weather data form the store----
@@ -18,6 +19,9 @@ function WeatherDetailsCard() {
       temp_min: weatherData?.main.temp_min as number,
       temp_max: weatherData?.main.temp_max as number,
     });
+
+  // return loading until geting data-----
+  if (!weatherData) return <Loading />;
 
   return (
     <div className="weather-details-card flex flex-col gap-10 sm:gap-5 lg:gap-10 justify-between h-full p-4">

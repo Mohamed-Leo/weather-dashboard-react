@@ -1,5 +1,5 @@
 import OtherOptionsIcons from "./OtherOptionsIcons";
-import SearchDialog from "./SearchDialog";
+import SearchDialog from "../components/SearchDialog";
 import ThemeSwitch from "./ThemeSwitch";
 import TimerClock from "./TimerClock";
 
