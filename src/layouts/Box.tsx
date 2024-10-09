@@ -28,7 +28,7 @@ function Box({
 
   return (
     <div
-      className={`box ${colSpan}${theme === "dark" ? backGround : `${backGround ? "bg-white" : ""}`} rounded-2xl ${hasPadding ? "p-4" : ""} space-y-4`}
+      className={`box ${colSpan}${theme === "dark" ? backGround : `${backGround ? "bg-white" : ""}`} min-h-[348px] rounded-2xl overflow-hidden ${hasPadding ? "p-4" : ""} space-y-4`}
     >
       {title && <h3 className="text-center">{title}</h3>}
 

@@ -1,16 +1,17 @@
 import HighlightBox from "./HighlightBox";
 import ProgressBar from "@/layouts/ProgressBar";
 import useFetchAirPollutionData from "@/hooks/useFetchAirPollutionData";
-import { useWeatherStore } from "@/store";
-import { Cloudy, UvIndex, Wind, WindyCloud } from "@/layouts/WeatherIcons";
+import { IWeather, useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
+import { useEffect } from "react";
+import useGetHighlightListBoxes from "@/hooks/useGetHighlightListBoxes";
 
 function HighlightListBoxes() {
   /*
    * get the weatherdata from the store to get the location to fetch the airPollution data--
-   * get the airPollution data----
+   * get the airPollution data and setAirPollution----
    */
-  const { weatherData, airPollution } = useWeatherStore();
+  const { weatherData, airPollution, setAirPollution } = useWeatherStore();
 
   // get the geoLocation form weatherData---
   const geoLocation = {
@@ -19,26 +20,18 @@ function HighlightListBoxes() {
   };
 
   // call the useFetchAirPollutionData and send the location from weatherData to get the airPollution data---
-  useFetchAirPollutionData(geoLocation);
+  const airPollutionData = useFetchAirPollutionData(geoLocation);
+
+  // update the airPollutionData in the store--
+  useEffect(() => {
+    if (airPollutionData) setAirPollution(airPollutionData);
+  }, [airPollutionData, setAirPollution]);
 
   // get the porgress value---
   const progress = (airPollution?.list[0].main.aqi as number) * 10;
 
-  const highlightListBoxes = [
-    {
-      title: `Clouds (${weatherData?.clouds.all})`,
-      icon: <Cloudy width={60} height={60} />,
-    },
-    { title: `UV Index`, icon: <UvIndex width={60} height={60} /> },
-    {
-      title: `Wind (speed ${weatherData?.wind.speed}), (deg ${weatherData?.wind.deg})`,
-      icon: <Wind width={60} height={60} />,
-    },
-    {
-      title: `Humidity (${weatherData?.main.humidity})`,
-      icon: <WindyCloud width={60} height={60} />,
-    },
-  ];
+  // get the highlightListBoxes data------
+  const highlightListBoxes = useGetHighlightListBoxes(weatherData as IWeather);
 
   // return loading until geting data-----
   if (!weatherData || !airPollution) return <Loading />;

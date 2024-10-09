@@ -1,8 +1,9 @@
 import { IWeatherForecast } from "@/store";
+import moment from "moment-timezone";
 
 function useGetToDayForeCast(foreCastFivedays: IWeatherForecast) {
   // get today date---
-  const toDayDate = new Date().toISOString().split("T")[0];
+  const toDayDate = moment().format("YYYY-MM-DD");
 
   // filter the days depending on the date-----
   const toDayForeCast = foreCastFivedays.list.filter((forecast) =>

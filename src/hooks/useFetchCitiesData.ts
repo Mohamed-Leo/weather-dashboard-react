@@ -1,11 +1,10 @@
-import { useWeatherStore } from "@/store";
+import { ICity } from "@/store";
 import { API_KEY } from "./../../config";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function useFetchCitiesData(citySearchValue: string) {
-  // get the setCities from the store---
-  const setCity = useWeatherStore((state) => state.setCity);
+  const [cityData, setCityData] = useState<ICity[]>();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -23,20 +22,20 @@ function useFetchCitiesData(citySearchValue: string) {
         if (data.length === 0) throw new Error("No cities found");
 
         // update the cities state in the store---
-        setCity(data);
+        setCityData(data);
       } catch (error) {
         // check if error is not cancelled message---
         if (!axios.isCancel(error)) {
           console.error("Error fetching cities:", error);
           // empty cities state in the store---
-          setCity([]);
+          setCityData([]);
         }
       }
     };
 
     // check on cityValue before call the api and make sure to set the cities state back to empty array----
     if (!citySearchValue) {
-      setCity([]);
+      setCityData([]);
       return;
     }
 
@@ -47,7 +46,9 @@ function useFetchCitiesData(citySearchValue: string) {
     return () => {
       controller.abort();
     };
-  }, [citySearchValue, setCity]);
+  }, [citySearchValue, setCityData]);
+
+  return cityData;
 }
 
 export default useFetchCitiesData;

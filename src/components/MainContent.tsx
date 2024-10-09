@@ -3,6 +3,8 @@ import ToDayWeatherBox from "./ToDayWeatherBox";
 import WeatherDetailsCard from "./WeatherDetailsCard";
 import HighlightListBoxes from "./HighlightListBoxes";
 import OtherCitiesListBoxes from "./OtherCitiesListBoxes";
+import moment from "moment-timezone";
+import MapBox from "./MapBox";
 
 function MainContent() {
   return (
@@ -10,6 +12,21 @@ function MainContent() {
       {/* weatherBox */}
       <Box backGround="bg-[#0e1421]" hasPadding={true}>
         <WeatherDetailsCard />
+      </Box>
+
+      {/* mapbox */}
+      <Box>
+        <MapBox />
+      </Box>
+
+      {/* today/week weatherBox */}
+      <Box
+        backGround="bg-[#0e1421]"
+        isFlex={true}
+        hasPadding={true}
+        title={`Today , ${moment().format("YYYY-MM-DD")}`}
+      >
+        <ToDayWeatherBox />
       </Box>
 
       {/* Today Highlight weatherBox */}
@@ -20,16 +37,6 @@ function MainContent() {
         hasPadding={true}
       >
         <HighlightListBoxes />
-      </Box>
-
-      {/* today/week weatherBox */}
-      <Box
-        backGround="bg-[#0e1421]"
-        isFlex={true}
-        hasPadding={true}
-        title={`Today , ${new Date().toISOString().split("T")[0]}`}
-      >
-        <ToDayWeatherBox />
       </Box>
 
       {/* Other Cities weatherBox */}

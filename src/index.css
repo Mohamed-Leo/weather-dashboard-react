@@ -70,7 +70,8 @@ body {
 }
 
 #light main .box .highlight-box {
-  background-color: #8f9bfc;
+  background-color: #023d57;
+  color: #fff;
 }
 
 #light main .shape-stroke {

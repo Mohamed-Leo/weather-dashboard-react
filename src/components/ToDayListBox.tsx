@@ -20,9 +20,7 @@ function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
   const toDayForeCast = useGetToDayForeCast(foreCastFivedays);
 
   // plugin for Carousel----
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
-  );
+  const plugin = React.useRef(Autoplay({ delay: 2000 }));
 
   return (
     <div
@@ -38,7 +36,7 @@ function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
           {toDayForeCast.map((todayCast) => (
             <CarouselItem
               key={todayCast.dt_txt}
-              className="basis-1/3 lg:basis-1/3"
+              className="basis-1/3 lg:basis-1/3 mx-auto"
             >
               <ToDayBox key={todayCast.dt_txt} todayForeCastData={todayCast} />
             </CarouselItem>

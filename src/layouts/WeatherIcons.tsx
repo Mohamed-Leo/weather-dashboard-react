@@ -53,7 +53,7 @@ export const Rainy = ({ width = 50, height = 50 }) => (
     </defs>
     <path
       className="shape-stroke"
-      fill="url(#b)"
+      fill="#e6effc"
       stroke="#e6effc"
       strokeMiterlimit="10"
       strokeWidth=".5"
@@ -753,7 +753,7 @@ export const Wind = ({ width = 50, height = 50 }) => (
     </defs>
     <path
       fill="none"
-      stroke="#fff"
+      stroke="#e6effc"
       strokeDasharray="35 22"
       strokeLinecap="round"
       strokeMiterlimit="10"
@@ -3107,5 +3107,77 @@ export const SunSet = ({ width = 50, height = 50 }) => (
       strokeWidth="2"
       d="M16 42.5h11l5 4.5 5-4.5h11"
     />
+  </svg>
+);
+
+export const LowHumidity = ({ width = 50, height = 50 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width={width}
+    height={height}
+    className="mx-auto"
+  >
+    <path
+      fill="none"
+      stroke="#2885c7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="3"
+      d="M32 20v24l-5.79-6.89L32 44l5.78-6.89"
+    >
+      <animateTransform
+        attributeName="transform"
+        begin="0s"
+        dur="1.5s"
+        keyTimes="0.0; 0.5; 0.9; 1.0"
+        repeatCount="indefinite"
+        type="translate"
+        values="0 0; 0 0; 0 9; 0 9"
+      />
+      <animate
+        attributeName="opacity"
+        dur="1.5s"
+        keyTimes="0.0; 0.3; 0.8; 0.9; 1.0"
+        repeatCount="indefinite"
+        values="0; 1; 1; 0; 0"
+      />
+    </path>
+  </svg>
+);
+
+export const HighHumidity = ({ width = 50, height = 50 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width={width}
+    height={height}
+    className="mx-auto"
+  >
+    <path
+      fill="none"
+      stroke="#ef4444"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="3"
+      d="M32 44V20l-5.79 6.89L32 20l5.78 6.89"
+    >
+      <animateTransform
+        attributeName="transform"
+        begin="0s"
+        dur="1.5s"
+        keyTimes="0.0; 0.5; 0.9; 1.0"
+        repeatCount="indefinite"
+        type="translate"
+        values="0 0; 0 0; 0 -9; 0 -9"
+      />
+      <animate
+        attributeName="opacity"
+        dur="1.5s"
+        keyTimes="0.0; 0.3; 0.8; 0.9; 1.0"
+        repeatCount="indefinite"
+        values="0; 1; 1; 0; 0"
+      />
+    </path>
   </svg>
 );

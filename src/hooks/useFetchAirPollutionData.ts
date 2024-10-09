@@ -1,7 +1,6 @@
-import { useWeatherStore } from "@/store";
 import { API_KEY } from "./../../config";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface IuseFetchAirPollutionDataProps {
   lat: number | undefined;
@@ -12,8 +11,7 @@ function useFetchAirPollutionData({
   lat,
   lon,
 }: IuseFetchAirPollutionDataProps) {
-  // get the setAirPollution from the store---
-  const setAirPollution = useWeatherStore((state) => state.setAirPollution);
+  const [airPollutionData, setAirPollutionData] = useState();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -25,9 +23,9 @@ function useFetchAirPollutionData({
           { signal: controller.signal },
         );
 
-        const data = response.data;
+        const data = await response.data;
 
-        setAirPollution(data);
+        setAirPollutionData(data);
       } catch (error) {
         if (!axios.isCancel(error)) {
           console.error(error);
@@ -45,7 +43,9 @@ function useFetchAirPollutionData({
     return () => {
       controller.abort();
     };
-  }, [lat, lon, setAirPollution]);
+  }, [lat, lon, setAirPollutionData]);
+
+  return airPollutionData;
 }
 
 export default useFetchAirPollutionData;

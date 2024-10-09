@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button";
 import { FaSearch } from "react-icons/fa";
 import CommandSearchBox from "./CommandSearchBox";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useFetchCitiesData from "@/hooks/useFetchCitiesData";
-import { ICity } from "@/store";
+import { ICity, useWeatherStore } from "@/store";
 import useFetchWeatherByCity from "@/hooks/useFetchWeatherByCity";
 
 function SearchDialog() {
@@ -20,6 +20,9 @@ function SearchDialog() {
   const [searchValue, setSearchValue] = useState<string>("");
 
   const [selectedCity, setSelectedCity] = useState("cairo");
+
+  // get the setWeatherData and setCity from the store---
+  const { setWeatherData, setCity } = useWeatherStore();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
@@ -36,15 +39,21 @@ function SearchDialog() {
     setSelectedCity(name);
   };
 
-  // call the api function with searchValue argument to fetch the cities data---------------------
-  useFetchCitiesData(searchValue);
+  // useFetchCitiesData to get the citydata then update the data in the store---------------------
+  const cityData = useFetchCitiesData(searchValue);
 
   /*
-   * fetch the weahter data for the choosen city by city name
+   * fetch the weahter data for the choosen city by city name and update data in the store
     there is an issue when fetch by geolocation (lon and lat) with the openweather api coz it's
     rounding the lon and lat numbers
    */
-  useFetchWeatherByCity(selectedCity);
+  const weatherData = useFetchWeatherByCity(selectedCity);
+
+  // Update the store with the new data when it changes--
+  useEffect(() => {
+    if (weatherData) setWeatherData(weatherData);
+    if (cityData) setCity(cityData);
+  }, [weatherData, setWeatherData, cityData, setCity]);
 
   return (
     <div className="search-box w-full sm:w-fit">
@@ -60,7 +69,7 @@ function SearchDialog() {
           </Button>
         </DialogTrigger>
 
-        <DialogContent className="p-0 border-none min-h-[50%] sm:min-h-fit text-white">
+        <DialogContent className="p-0 border-none w-[80%] sm:w-full sm:min-h-fit text-white">
           {/* use VisuallyHidden component to hide title and Description but still work with screen readers */}
           <VisuallyHidden>
             <DialogTitle>Search Box By Cities</DialogTitle>

@@ -4,10 +4,12 @@ import TomorrowBox from "./TomorrowBox";
 import { IWeather, useWeatherStore } from "@/store";
 import useFetchForecastByGeoLocation from "@/hooks/useFetchForecastByGeoLocation";
 import Loading from "@/layouts/Loading";
+import { useEffect } from "react";
 
 function ToDayWeatherBox() {
-  // get the foreCastFivedays from the store----
-  const { weatherData, foreCastFivedays } = useWeatherStore();
+  // get the store------
+  const { weatherData, setForeCastFivedays, foreCastFivedays } =
+    useWeatherStore();
 
   // get the geoLocation form weatherData---
   const geoLocation = {
@@ -16,7 +18,12 @@ function ToDayWeatherBox() {
   };
 
   // call the useFetchForecastByGeoLocation and send the location from weatherData to get the Forecast data---
-  useFetchForecastByGeoLocation(geoLocation);
+  const foreCastfetchedData = useFetchForecastByGeoLocation(geoLocation);
+
+  // Update the store when foreCastData changes
+  useEffect(() => {
+    if (foreCastfetchedData) setForeCastFivedays(foreCastfetchedData);
+  }, [foreCastfetchedData, setForeCastFivedays]);
 
   // return loading until geting data-----
   if (!weatherData || !foreCastFivedays) return <Loading />;

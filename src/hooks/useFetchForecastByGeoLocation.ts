@@ -1,7 +1,6 @@
-import { useWeatherStore } from "@/store";
 import { API_KEY } from "./../../config";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface IUseFetchForecastByGeoLocationProps {
   lat: number | undefined;
@@ -12,10 +11,7 @@ function useFetchForecastByGeoLocation({
   lat,
   lon,
 }: IUseFetchForecastByGeoLocationProps) {
-  // get the setForeCastFivedays from the store---
-  const setForeCastFivedays = useWeatherStore(
-    (state) => state.setForeCastFivedays,
-  );
+  const [foreCastData, setForeCastData] = useState();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -27,9 +23,9 @@ function useFetchForecastByGeoLocation({
           { signal: controller.signal },
         );
 
-        const data = response.data;
+        const data = await response.data;
 
-        setForeCastFivedays(data);
+        setForeCastData(data);
       } catch (error) {
         if (!axios.isCancel(error)) {
           console.error(error);
@@ -47,7 +43,9 @@ function useFetchForecastByGeoLocation({
     return () => {
       controller.abort();
     };
-  }, [lat, lon, setForeCastFivedays]);
+  }, [lat, lon, setForeCastData]);
+
+  return foreCastData;
 }
 
 export default useFetchForecastByGeoLocation;

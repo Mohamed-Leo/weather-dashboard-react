@@ -1,11 +1,9 @@
-import { useWeatherStore } from "@/store";
 import { API_KEY } from "./../../config";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function useFetchWeatherByCity(name: string) {
-  // get the setWeatherData from the store---
-  const setWeatherData = useWeatherStore((state) => state.setWeatherData);
+  const [weatherData, setWeatherData] = useState();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -17,7 +15,7 @@ function useFetchWeatherByCity(name: string) {
           { signal: controller.signal },
         );
 
-        const data = response.data;
+        const data = await response.data;
 
         setWeatherData(data);
       } catch (error) {
@@ -35,6 +33,8 @@ function useFetchWeatherByCity(name: string) {
       controller.abort();
     };
   }, [name, setWeatherData]);
+
+  return weatherData;
 }
 
 export default useFetchWeatherByCity;
