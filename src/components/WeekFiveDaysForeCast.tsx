@@ -46,7 +46,7 @@ function WeekFiveDaysForeCast() {
               key={todayCast.date}
               className="basis-1/2 md:basis-1/3 mx-auto"
             >
-              <div className="space-y-3 rounded-md py-5 px-4 bg-[#192131] hover:bg-[#29354e] transition-colors">
+              <div className="week-box space-y-3 rounded-md py-5 px-4 bg-[#192131] hover:bg-[#29354e] transition-colors">
                 <h3 className="text-md">{todayCast.date}</h3>
 
                 {/* degree-weather-description */}

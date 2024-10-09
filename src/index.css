@@ -46,12 +46,6 @@ body {
   color: #000;
 }
 
-/* #light .command-search-box {
-  background-color: #fff !important;
-  color: #000 !important;
-  width: 100%;
-} */
-
 #light header .search-box,
 #light header .icon,
 #light main .weather-details-card,
@@ -72,6 +66,11 @@ body {
 #light main .box .highlight-box {
   background-color: #023d57;
   color: #fff;
+}
+
+#light main .box .week-box {
+  background-color: transparent;
+  border: 1px solid;
 }
 
 #light main .shape-stroke {
@@ -147,13 +146,11 @@ body {
 
 /* progress---- */
 .progress {
-  background: linear-gradient(
-    90deg,
-    rgba(58, 110, 180, 1) 0%,
-    rgba(126, 212, 87, 1) 20%,
-    rgba(248, 212, 73, 1) 40%,
-    rgba(235, 77, 96, 1) 60%,
-    rgba(180, 96, 231, 1) 80%,
-    rgba(178, 34, 34, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(58, 110, 180, 1) 0%,
+      rgba(126, 212, 87, 1) 20%,
+      rgba(248, 212, 73, 1) 40%,
+      rgba(235, 77, 96, 1) 60%,
+      rgba(180, 96, 231, 1) 80%,
+      rgba(178, 34, 34, 1) 100%);
 }
