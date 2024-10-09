@@ -24,7 +24,7 @@ function CommandSearchBox({
   const city = useWeatherStore((state) => state.city);
 
   return (
-    <Command className="command-search-box bg-[#09090b] rounded-lg border shadow-md w-full md:min-w-[450px] text-white">
+    <Command className="command-search-box bg-[#09090b] rounded-lg border shadow-md w-full md:min-w-[450px] text-white relative z-50">
       <CommandInput
         onChangeCapture={handleInputChange}
         value={searchValue}

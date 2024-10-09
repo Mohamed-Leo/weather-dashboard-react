@@ -7,7 +7,7 @@ import {
   WindyCloud,
 } from "@/layouts/WeatherIcons";
 
-function useGetHighlightListBoxes(weatherData: IWeather) {
+function GetHighlightListBoxes(weatherData: IWeather) {
   // check on data-----
   if (!weatherData) return [];
 
@@ -38,4 +38,4 @@ function useGetHighlightListBoxes(weatherData: IWeather) {
   return highlightListBoxes;
 }
 
-export default useGetHighlightListBoxes;
+export default GetHighlightListBoxes;

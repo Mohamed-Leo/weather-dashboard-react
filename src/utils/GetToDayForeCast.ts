@@ -1,7 +1,7 @@
 import { IWeatherForecast } from "@/store";
 import moment from "moment-timezone";
 
-function useGetToDayForeCast(foreCastFivedays: IWeatherForecast) {
+function GetToDayForeCast(foreCastFivedays: IWeatherForecast) {
   // get today date---
   const toDayDate = moment().format("YYYY-MM-DD");
 
@@ -13,4 +13,4 @@ function useGetToDayForeCast(foreCastFivedays: IWeatherForecast) {
   return toDayForeCast;
 }
 
-export default useGetToDayForeCast;
+export default GetToDayForeCast;

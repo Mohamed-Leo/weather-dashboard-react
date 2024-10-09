@@ -24,7 +24,7 @@ function MapBox() {
       center={locationCoords}
       zoom={13}
       scrollWheelZoom={false}
-      className="size-full z-10"
+      className="min-h-80 relative z-10"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

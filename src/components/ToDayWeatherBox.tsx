@@ -29,7 +29,7 @@ function ToDayWeatherBox() {
   if (!weatherData || !foreCastFivedays) return <Loading />;
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 w-full">
       {/* top part- today/week */}
       <ToDayListBox
         foreCastFivedays={foreCastFivedays}

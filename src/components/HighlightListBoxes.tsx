@@ -4,7 +4,7 @@ import useFetchAirPollutionData from "@/hooks/useFetchAirPollutionData";
 import { IWeather, useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
 import { useEffect } from "react";
-import useGetHighlightListBoxes from "@/hooks/useGetHighlightListBoxes";
+import GetHighlightListBoxes from "@/utils/GetHighlightListBoxes";
 
 function HighlightListBoxes() {
   /*
@@ -30,11 +30,11 @@ function HighlightListBoxes() {
   // get the porgress value---
   const progress = (airPollution?.list[0].main.aqi as number) * 10;
 
-  // get the highlightListBoxes data------
-  const highlightListBoxes = useGetHighlightListBoxes(weatherData as IWeather);
-
   // return loading until geting data-----
   if (!weatherData || !airPollution) return <Loading />;
+
+  // get the highlightListBoxes data from utiliy------
+  const highlightListBoxes = GetHighlightListBoxes(weatherData as IWeather);
 
   return (
     <>

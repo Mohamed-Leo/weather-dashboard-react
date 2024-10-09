@@ -1,6 +1,6 @@
 import { IWeather } from "@/store";
 import { SunRise, SunSet } from "../layouts/WeatherIcons";
-import useConvertUnixToTime from "@/hooks/useConvertUnixToTime";
+import ConvertUnixToTime from "@/utils/ConvertUnixToTime";
 
 interface IToDatSunRiseAndSetProps {
   backGround?: string;
@@ -12,12 +12,12 @@ function ToDaySunRiseAndSet({
   backGround = "",
 }: IToDatSunRiseAndSetProps) {
   // use useConvertUnixToTime custom hook to get the right time--
-  const sunriseTime = useConvertUnixToTime(
+  const sunriseTime = ConvertUnixToTime(
     weatherData?.sys.sunrise as number,
     weatherData?.timezone as number,
   );
 
-  const sunsetTime = useConvertUnixToTime(
+  const sunsetTime = ConvertUnixToTime(
     weatherData?.sys.sunset as number,
     weatherData?.timezone as number,
   );

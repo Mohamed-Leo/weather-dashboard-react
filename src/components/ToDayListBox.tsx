@@ -8,7 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { IWeatherForecast } from "@/store";
-import useGetToDayForeCast from "@/hooks/useGetToDayForeCast";
+import GetToDayForeCast from "@/utils/GetToDayForeCast";
 
 interface IToDayBoxProps {
   backGround: string;
@@ -16,19 +16,17 @@ interface IToDayBoxProps {
 }
 
 function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
-  // get today forecast by using the useGetToDayForeCast custom hook---
-  const toDayForeCast = useGetToDayForeCast(foreCastFivedays);
+  // get today forecast by using the GetToDayForeCast utility---
+  const toDayForeCast = GetToDayForeCast(foreCastFivedays);
 
   // plugin for Carousel----
-  const plugin = React.useRef(Autoplay({ delay: 2000 }));
+  const plugin = React.useRef(Autoplay({ delay: 3000 }));
 
   return (
-    <div
-      className={`today-list-boxes w-full flex gap-3 lg:gap-1 flex-wrap justify-center ${backGround} p-5 rounded-3xl`}
-    >
+    <div className={`today-list-boxes w-full ${backGround} p-5 rounded-3xl`}>
       <Carousel
         plugins={[plugin.current]}
-        className="w-full max-w-56 sm:max-w-sm md:max-w-60 lg:max-w-sm xl:max-w-md"
+        className="w-full"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
