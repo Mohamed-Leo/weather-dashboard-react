@@ -1,16 +1,8 @@
-import { IForecastItem } from "@/store";
+import { IForecastItem, IWeeklyData } from "@/interfaces";
 import moment from "moment-timezone";
 
-export type TWeklyData = {
-	date: string;
-	temp: number;
-	description: string;
-	icon: string;
-	weatherId: number;
-};
-
 const processWeeklyForecast = (foreCastList: IForecastItem[]) => {
-	const weeklyData: TWeklyData[] = [];
+	const weeklyData: IWeeklyData[] = [];
 
 	// get today----
 	const today = moment().startOf("day");

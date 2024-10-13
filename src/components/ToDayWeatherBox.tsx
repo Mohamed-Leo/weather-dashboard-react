@@ -1,10 +1,11 @@
 import ToDaySunRiseAndSet from "./ToDaySunRiseAndSet";
 import ToDayListBox from "./ToDayListBox";
 import TomorrowBox from "./TomorrowBox";
-import { IWeather, useWeatherStore } from "@/store";
+import { useWeatherStore } from "@/store";
 import useFetchForecastByGeoLocation from "@/hooks/useFetchForecastByGeoLocation";
 import Loading from "@/layouts/Loading";
 import { useEffect } from "react";
+import { IWeather, IWeatherForecast } from "@/interfaces";
 
 function ToDayWeatherBox() {
 	// get the store------
@@ -18,7 +19,8 @@ function ToDayWeatherBox() {
 	};
 
 	// call the useFetchForecastByGeoLocation and send the location from weatherData to get the Forecast data---
-	const foreCastfetchedData = useFetchForecastByGeoLocation(geoLocation);
+	const foreCastfetchedData: IWeatherForecast | undefined =
+		useFetchForecastByGeoLocation(geoLocation);
 
 	// Update the store when foreCastData changes
 	useEffect(() => {

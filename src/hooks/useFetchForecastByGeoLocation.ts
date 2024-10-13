@@ -1,11 +1,7 @@
+import { IUseFetchForecastByGeoLocationProps } from "@/interfaces";
 import { API_KEY } from "./../../config";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-interface IUseFetchForecastByGeoLocationProps {
-	lat: number | undefined;
-	lon: number | undefined;
-}
 
 function useFetchForecastByGeoLocation({
 	lat,

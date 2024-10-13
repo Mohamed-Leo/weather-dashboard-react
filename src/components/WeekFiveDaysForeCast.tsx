@@ -11,6 +11,7 @@ import {
 import { IoTodayOutline } from "react-icons/io5";
 import processWeeklyForecast from "@/utils/processWeeklyForecast";
 import WeatherIcon from "./WeatherIcon";
+import { IWeeklyData } from "@/interfaces";
 
 function WeekFiveDaysForeCast() {
 	// get the forecast data from the store---
@@ -26,7 +27,7 @@ function WeekFiveDaysForeCast() {
 	const { city, list } = foreCastData;
 
 	// get the weeklydata----
-	const weeklyData = processWeeklyForecast(list);
+	const weeklyData: IWeeklyData[] = processWeeklyForecast(list);
 
 	return (
 		<div className="h-full">
@@ -41,7 +42,7 @@ function WeekFiveDaysForeCast() {
 				onMouseLeave={plugin.current.reset}
 			>
 				<CarouselContent>
-					{weeklyData.map((todayCast) => (
+					{weeklyData.map((todayCast: IWeeklyData) => (
 						<CarouselItem
 							key={todayCast.date}
 							className="basis-1/2 md:basis-1/3 mx-auto"

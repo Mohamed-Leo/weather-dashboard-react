@@ -1,12 +1,7 @@
-import { IWeatherForecast } from "@/store";
 import useTemperatureConverter from "@/hooks/useTemperatureConverter";
 import WeatherIcon from "./WeatherIcon";
 import GetTomorrowForeCast from "@/utils/GetTomorrowForeCast";
-
-interface ITomorrowBoxProps {
-	backGround: string;
-	foreCastFivedays: IWeatherForecast;
-}
+import { ITomorrowBoxProps } from "@/interfaces";
 
 function TomorrowBox({ backGround, foreCastFivedays }: ITomorrowBoxProps) {
 	// get the tommorow foreCast by using useGetTomorrowForeCast custom hook----

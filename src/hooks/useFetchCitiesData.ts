@@ -1,4 +1,4 @@
-import { ICity } from "@/store";
+import { ICity } from "@/interfaces";
 import { API_KEY } from "./../../config";
 import axios from "axios";
 import { useEffect, useState } from "react";

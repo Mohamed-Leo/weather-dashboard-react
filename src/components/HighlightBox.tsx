@@ -1,11 +1,4 @@
-import { ReactNode } from "react";
-
-interface IHighlightBoxProps {
-	element: ReactNode;
-	title?: string;
-	backGround?: string;
-	style?: string;
-}
+import { IHighlightBoxProps } from "@/interfaces";
 
 function HighlightBox({ element, title, style }: IHighlightBoxProps) {
 	return (

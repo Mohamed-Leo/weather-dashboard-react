@@ -1,10 +1,7 @@
 // this component for the event on flying for the map----
+import { FlyToCityMapProps } from "@/interfaces";
 import { useEffect } from "react";
 import { useMap } from "react-leaflet";
-
-interface FlyToCityMapProps {
-	locationCoords: [number, number];
-}
 
 function FlyToCityMap({ locationCoords }: FlyToCityMapProps) {
 	const map = useMap();

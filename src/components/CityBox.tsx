@@ -1,13 +1,7 @@
 import useFetchWeatherByCity from "@/hooks/useFetchWeatherByCity";
 import Loading from "@/layouts/Loading";
-import { IWeather } from "@/store";
 import WeatherIcon from "./WeatherIcon";
-
-interface IOtherCityBoxProps {
-	backGround?: string;
-	cityName: string;
-	style: string;
-}
+import { IOtherCityBoxProps, IWeather } from "@/interfaces";
 
 function CityBox({ backGround = "", cityName, style }: IOtherCityBoxProps) {
 	// call the useFetchWeatherByCity-----

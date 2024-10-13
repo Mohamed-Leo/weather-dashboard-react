@@ -1,11 +1,7 @@
+import { IuseFetchAirPollutionDataProps } from "@/interfaces";
 import { API_KEY } from "./../../config";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-interface IuseFetchAirPollutionDataProps {
-	lat: number | undefined;
-	lon: number | undefined;
-}
 
 function useFetchAirPollutionData({
 	lat,

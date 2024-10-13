@@ -1,5 +1,7 @@
+import { ICities, ICity } from "@/interfaces";
+
 // suggestionsOptions for the command search box--------
-export const suggestionsOptions = [
+export const suggestionsOptions: ICity[] = [
 	{
 		name: "Gaza",
 		country: "PS",
@@ -37,10 +39,10 @@ export const suggestionsOptions = [
 ];
 
 // other cities data----------------------------
-const commanCitiesStyle =
+const commanCitiesStyle: string =
 	"flex flex-col gap-3 items-center justify-center lg:grid grid-cols-2 lg:gap-5 sm:gap-2 col-span-3 rounded-xl py-3 px-6";
 
-export const cities = [
+export const cities: ICities[] = [
 	{
 		name: "USA",
 		style: commanCitiesStyle,

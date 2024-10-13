@@ -11,8 +11,9 @@ import CommandSearchBox from "./CommandSearchBox";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useEffect, useState } from "react";
 import useFetchCitiesData from "@/hooks/useFetchCitiesData";
-import { ICity, useWeatherStore } from "@/store";
+import { useWeatherStore } from "@/store";
 import useFetchWeatherByCity from "@/hooks/useFetchWeatherByCity";
+import { ICity } from "@/interfaces";
 
 function SearchDialog() {
 	const [isOpen, setIsOpen] = useState(false);

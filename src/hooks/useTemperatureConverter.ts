@@ -1,22 +1,9 @@
 // this function to convert the tempNumber-----
 import { useState, useMemo } from "react";
 import ConvertedTempIcon from "@/utils/ConvertedTempIcon";
+import { ConvertedTemperatures, TemperatureData } from "@/interfaces";
 
 type TemperatureUnit = "celsius" | "fahrenheit";
-
-interface TemperatureData {
-	temp: number;
-	feels_like?: number;
-	temp_min?: number;
-	temp_max?: number;
-}
-
-interface ConvertedTemperatures {
-	temp: number;
-	feels_like: number;
-	temp_min: number;
-	temp_max: number;
-}
 
 function useTemperatureConverter(kelvinTemp: TemperatureData) {
 	const [unit, setUnit] = useState<TemperatureUnit>("celsius");

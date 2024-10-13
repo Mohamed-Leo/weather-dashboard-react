@@ -1,10 +1,5 @@
-import { ICity } from "@/store";
 import { CommandItem } from "./ui/command";
-
-interface ICityItem {
-	handleItemSelect: (city: ICity) => void;
-	city: ICity;
-}
+import { ICityItem } from "@/interfaces";
 
 function CityItem({ handleItemSelect, city }: ICityItem) {
 	// destrucure city data----

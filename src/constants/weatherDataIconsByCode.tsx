@@ -21,8 +21,9 @@ import {
 	Tornado,
 	CloudyOverCast,
 } from "@/constants/WeatherIcons";
+import { IWeatherIconByCode } from "@/interfaces";
 
-const weatherDataIconsByCode = [
+const weatherDataIconsByCode: IWeatherIconByCode[] = [
 	// Thunderstorm
 	{
 		code: 200,

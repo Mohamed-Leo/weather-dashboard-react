@@ -1,7 +1,4 @@
-interface ITemperatureProps {
-	temps: number[];
-	tempIcon: JSX.Element;
-}
+import { ITemperatureProps } from "@/interfaces";
 
 function Temperature({ temps, tempIcon }: ITemperatureProps) {
 	return (

@@ -1,4 +1,3 @@
-import { IWeather } from "@/store";
 import {
 	Cloudy,
 	HighHumidity,
@@ -6,6 +5,7 @@ import {
 	WindyCloud,
 } from "@/constants/WeatherIcons";
 import Compass from "@/components/Compass";
+import { IHighlightListBoxes, IWeather } from "@/interfaces";
 
 function getHighlightListBoxes(weatherData: IWeather) {
 	// check on data-----
@@ -15,7 +15,7 @@ function getHighlightListBoxes(weatherData: IWeather) {
 	const ComonStyle =
 		"flex flex-col gap-3 xl:gap-5 items-center justify-between bg-[#0e1421] rounded-2xl md:flex-col xl:flex-row py-3 px-6";
 
-	const highlightListBoxes = [
+	const highlightListBoxes: IHighlightListBoxes[] = [
 		{
 			title: `Wind (${weatherData?.wind.deg} deg)`,
 			icon: (

@@ -1,10 +1,13 @@
 import HighlightBox from "./HighlightBox";
 import ProgressBar from "@/layouts/ProgressBar";
 import useFetchAirPollutionData from "@/hooks/useFetchAirPollutionData";
-import { IWeather, useWeatherStore } from "@/store";
+import { useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
 import { useEffect } from "react";
-import getHighlightListBoxes from "@/utils/getHighlightListBoxes";
+import getHighlightListBoxes, {
+	IHighlightListBoxes,
+} from "@/utils/getHighlightListBoxes";
+import { IWeather } from "@/interfaces";
 
 function HighlightListBoxes() {
 	/*
@@ -43,7 +46,7 @@ function HighlightListBoxes() {
 			</ProgressBar>
 
 			{/* loop on highlightListBoxes from the constants folder */}
-			{highlightListBoxes.map((box, i) => (
+			{highlightListBoxes.map((box: IHighlightListBoxes, i: number) => (
 				<HighlightBox
 					key={i}
 					title={box.title}

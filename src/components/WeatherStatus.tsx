@@ -1,8 +1,4 @@
-interface IWeatherStatusProps {
-	weatherDescription: string;
-	feelsLikeTemp: number;
-	tempIcon: JSX.Element;
-}
+import { IWeatherStatusProps } from "@/interfaces";
 
 function WeatherStatus({
 	weatherDescription,

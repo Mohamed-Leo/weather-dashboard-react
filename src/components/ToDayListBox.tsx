@@ -7,8 +7,8 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
-import { IWeatherForecast } from "@/store";
 import GetToDayForeCast from "@/utils/GetToDayForeCast";
+import { IForecastItem, IWeatherForecast } from "@/interfaces";
 
 interface IToDayBoxProps {
 	backGround: string;
@@ -31,7 +31,7 @@ function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
 				onMouseLeave={plugin.current.reset}
 			>
 				<CarouselContent>
-					{toDayForeCast.map((todayCast) => (
+					{toDayForeCast.map((todayCast: IForecastItem) => (
 						<CarouselItem
 							key={todayCast.dt_txt}
 							className="basis-1/3 lg:basis-1/3 mx-auto"

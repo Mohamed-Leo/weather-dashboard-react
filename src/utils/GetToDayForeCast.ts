@@ -1,4 +1,4 @@
-import { IWeatherForecast } from "@/store";
+import { IForecastItem, IWeatherForecast } from "@/interfaces";
 import moment from "moment-timezone";
 
 function GetToDayForeCast(foreCastFivedays: IWeatherForecast) {
@@ -6,8 +6,8 @@ function GetToDayForeCast(foreCastFivedays: IWeatherForecast) {
 	const toDayDate = moment().format("YYYY-MM-DD");
 
 	// filter the days depending on the date-----
-	const toDayForeCast = foreCastFivedays.list.filter((forecast) =>
-		forecast.dt_txt.includes(toDayDate),
+	const toDayForeCast = foreCastFivedays.list.filter(
+		(forecast: IForecastItem) => forecast.dt_txt.includes(toDayDate),
 	);
 
 	return toDayForeCast;

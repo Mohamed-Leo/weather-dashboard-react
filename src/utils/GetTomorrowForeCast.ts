@@ -1,4 +1,4 @@
-import { IWeatherForecast } from "@/store";
+import { IWeatherForecast } from "@/interfaces";
 import moment from "moment-timezone";
 
 function GetTomorrowForeCast(foreCastFivedays: IWeatherForecast) {

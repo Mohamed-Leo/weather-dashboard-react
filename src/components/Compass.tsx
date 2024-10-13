@@ -1,8 +1,4 @@
-interface ICompassProps {
-	width?: number;
-	height?: number;
-	direction?: number;
-}
+import { ICompassProps } from "@/interfaces";
 
 function Compass({ width = 50, height = 50, direction = 0 }: ICompassProps) {
 	return (

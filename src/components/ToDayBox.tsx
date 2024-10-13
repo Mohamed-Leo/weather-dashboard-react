@@ -1,7 +1,7 @@
-import { IForecastItem } from "@/store";
 import WeatherIcon from "./WeatherIcon";
 import moment from "moment-timezone";
 import useTemperatureConverter from "@/hooks/useTemperatureConverter";
+import { IForecastItem } from "@/interfaces";
 
 type TToDayBoxProps = {
 	todayForeCastData: IForecastItem;

@@ -7,13 +7,8 @@ import {
 	CommandList,
 } from "@/components/ui/command";
 import { suggestionsOptions } from "@/constants/globalVariables";
-import { ICity, useWeatherStore } from "@/store";
-
-interface ICommandSearchBoxProps {
-	handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-	handleItemSelect: (city: ICity) => void;
-	searchValue: string;
-}
+import { ICity, ICommandSearchBoxProps } from "@/interfaces";
+import { useWeatherStore } from "@/store";
 
 function CommandSearchBox({
 	handleInputChange,
@@ -36,14 +31,14 @@ function CommandSearchBox({
 
 				<CommandGroup heading="Suggestions">
 					{city.length !== 0
-						? city.map((city) => (
+						? city.map((city: ICity) => (
 								<CityItem
 									key={`${city.name}-${city.country}`}
 									handleItemSelect={handleItemSelect}
 									city={city}
 								/>
 							))
-						: suggestionsOptions.map((city, i) => (
+						: suggestionsOptions.map((city: ICity, i: number) => (
 								<CityItem
 									key={i}
 									handleItemSelect={handleItemSelect}
