@@ -84,7 +84,7 @@ This project leverages several modern technologies:
 The weather data is fetched from the **OpenWeatherMap API**, which provides detailed weather information including:
 
 - Current weather conditions
-- 7-day forecast
+- 5-day forecast
 - Historical weather data
 
 Data is updated dynamically based on the user’s search queries. Axios is used to make HTTP requests to the API, ensuring efficient and clean code.
