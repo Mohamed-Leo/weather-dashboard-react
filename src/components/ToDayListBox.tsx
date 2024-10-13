@@ -7,8 +7,8 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
-import GetToDayForeCast from "@/utils/GetToDayForeCast";
 import { IForecastItem, IWeatherForecast } from "@/interfaces";
+import getToDayForeCast from "@/utils/GetToDayForeCast";
 
 interface IToDayBoxProps {
 	backGround: string;
@@ -17,7 +17,7 @@ interface IToDayBoxProps {
 
 function ToDayListBox({ foreCastFivedays, backGround = "" }: IToDayBoxProps) {
 	// get today forecast by using the GetToDayForeCast utility---
-	const toDayForeCast = GetToDayForeCast(foreCastFivedays);
+	const toDayForeCast = getToDayForeCast(foreCastFivedays);
 
 	// plugin for Carousel----
 	const plugin = React.useRef(Autoplay({ delay: 3000 }));

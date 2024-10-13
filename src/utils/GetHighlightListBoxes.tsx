@@ -7,7 +7,7 @@ import {
 import Compass from "@/components/Compass";
 import { IHighlightListBoxes, IWeather } from "@/interfaces";
 
-function getHighlightListBoxes(weatherData: IWeather) {
+function getHighlightListBoxes(weatherData: IWeather): IHighlightListBoxes[] {
 	// check on data-----
 	if (!weatherData) return [];
 

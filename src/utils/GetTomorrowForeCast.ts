@@ -1,7 +1,9 @@
-import { IWeatherForecast } from "@/interfaces";
+import { IForecastItem, IWeatherForecast } from "@/interfaces";
 import moment from "moment-timezone";
 
-function GetTomorrowForeCast(foreCastFivedays: IWeatherForecast) {
+function getTomorrowForeCast(
+	foreCastFivedays: IWeatherForecast,
+): IForecastItem | undefined {
 	const tomorrow = moment()
 		.add(1, "days")
 		.startOf("day")
@@ -9,11 +11,11 @@ function GetTomorrowForeCast(foreCastFivedays: IWeatherForecast) {
 		.split("T")[0];
 
 	// Find the first forecast item for tomorrow---
-	const tomorrowForecast = foreCastFivedays.list.find((forecast) =>
-		forecast.dt_txt.includes(tomorrow),
+	const tomorrowForecast = foreCastFivedays.list.find(
+		(forecast: IForecastItem) => forecast.dt_txt.includes(tomorrow),
 	);
 
 	return tomorrowForecast;
 }
 
-export default GetTomorrowForeCast;
+export default getTomorrowForeCast;

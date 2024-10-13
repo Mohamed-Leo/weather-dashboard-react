@@ -1,7 +1,9 @@
 import { IForecastItem, IWeeklyData } from "@/interfaces";
 import moment from "moment-timezone";
 
-const processWeeklyForecast = (foreCastList: IForecastItem[]) => {
+const processWeeklyForecast = (
+	foreCastList: IForecastItem[],
+): IWeeklyData[] => {
 	const weeklyData: IWeeklyData[] = [];
 
 	// get today----
