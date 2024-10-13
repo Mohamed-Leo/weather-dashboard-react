@@ -3,49 +3,49 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 interface IUseFetchForecastByGeoLocationProps {
-  lat: number | undefined;
-  lon: number | undefined;
+	lat: number | undefined;
+	lon: number | undefined;
 }
 
 function useFetchForecastByGeoLocation({
-  lat,
-  lon,
+	lat,
+	lon,
 }: IUseFetchForecastByGeoLocationProps) {
-  const [foreCastData, setForeCastData] = useState();
+	const [foreCastData, setForeCastData] = useState();
 
-  useEffect(() => {
-    const controller = new AbortController();
+	useEffect(() => {
+		const controller = new AbortController();
 
-    const fetchForecastByGeoLocation = async () => {
-      try {
-        const response = await axios.get(
-          `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`,
-          { signal: controller.signal },
-        );
+		const fetchForecastByGeoLocation = async () => {
+			try {
+				const response = await axios.get(
+					`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`,
+					{ signal: controller.signal },
+				);
 
-        const data = await response.data;
+				const data = await response.data;
 
-        setForeCastData(data);
-      } catch (error) {
-        if (!axios.isCancel(error)) {
-          console.error(error);
-        }
-      }
-    };
+				setForeCastData(data);
+			} catch (error) {
+				if (!axios.isCancel(error)) {
+					console.error(error);
+				}
+			}
+		};
 
-    // check on geolocation data before call----
-    if (!lat && !lon) return;
+		// check on geolocation data before call----
+		if (!lat && !lon) return;
 
-    // call the api--
-    fetchForecastByGeoLocation();
+		// call the api--
+		fetchForecastByGeoLocation();
 
-    // clear up-----
-    return () => {
-      controller.abort();
-    };
-  }, [lat, lon, setForeCastData]);
+		// clear up-----
+		return () => {
+			controller.abort();
+		};
+	}, [lat, lon, setForeCastData]);
 
-  return foreCastData;
+	return foreCastData;
 }
 
 export default useFetchForecastByGeoLocation;

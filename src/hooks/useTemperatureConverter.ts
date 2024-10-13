@@ -5,48 +5,48 @@ import ConvertedTempIcon from "@/utils/ConvertedTempIcon";
 type TemperatureUnit = "celsius" | "fahrenheit";
 
 interface TemperatureData {
-  temp: number;
-  feels_like?: number;
-  temp_min?: number;
-  temp_max?: number;
+	temp: number;
+	feels_like?: number;
+	temp_min?: number;
+	temp_max?: number;
 }
 
 interface ConvertedTemperatures {
-  temp: number;
-  feels_like: number;
-  temp_min: number;
-  temp_max: number;
+	temp: number;
+	feels_like: number;
+	temp_min: number;
+	temp_max: number;
 }
 
 function useTemperatureConverter(kelvinTemp: TemperatureData) {
-  const [unit, setUnit] = useState<TemperatureUnit>("celsius");
+	const [unit, setUnit] = useState<TemperatureUnit>("celsius");
 
-  // destructure kelvinTemp data -----
-  const { temp, feels_like, temp_max, temp_min } = kelvinTemp;
+	// destructure kelvinTemp data -----
+	const { temp, feels_like, temp_max, temp_min } = kelvinTemp;
 
-  // tempIcon---
-  const tempIcon = ConvertedTempIcon(unit);
+	// tempIcon---
+	const tempIcon = ConvertedTempIcon(unit);
 
-  const convertedTemps = useMemo<ConvertedTemperatures>(() => {
-    // create the converter ----
-    const converter = unit === "celsius" ? kelvinToCelsius : kelvinToFahrenheit;
+	const convertedTemps = useMemo<ConvertedTemperatures>(() => {
+		// create the converter ----
+		const converter = unit === "celsius" ? kelvinToCelsius : kelvinToFahrenheit;
 
-    return {
-      temp: converter(temp),
-      feels_like: converter(feels_like as number),
-      temp_min: converter(temp_min as number),
-      temp_max: converter(temp_max as number),
-    };
-  }, [temp, feels_like, temp_max, temp_min, unit]);
+		return {
+			temp: converter(temp),
+			feels_like: converter(feels_like as number),
+			temp_min: converter(temp_min as number),
+			temp_max: converter(temp_max as number),
+		};
+	}, [temp, feels_like, temp_max, temp_min, unit]);
 
-  const toggleUnit = () =>
-    setUnit((prev) => (prev === "celsius" ? "fahrenheit" : "celsius"));
+	const toggleUnit = () =>
+		setUnit((prev) => (prev === "celsius" ? "fahrenheit" : "celsius"));
 
-  return { convertedTemps, unit, toggleUnit, tempIcon };
+	return { convertedTemps, unit, toggleUnit, tempIcon };
 }
 
 const kelvinToCelsius = (kelvinTemp: number) => Math.round(kelvinTemp - 273.15);
 const kelvinToFahrenheit = (kelvinTemp: number) =>
-  Math.round(((kelvinTemp - 273.15) * 9) / 5 + 32);
+	Math.round(((kelvinTemp - 273.15) * 9) / 5 + 32);
 
 export default useTemperatureConverter;

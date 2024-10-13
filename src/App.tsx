@@ -5,29 +5,29 @@ import MainBoxes from "./components/MainContent";
 type Theme = "dark" | "light";
 
 export type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
+	theme: Theme;
+	toggleTheme: () => void;
 };
 
 // create a themeContext----
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: "dark",
-  toggleTheme: () => {},
+	theme: "dark",
+	toggleTheme: () => {},
 });
 
 function App() {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const toggleTheme = () =>
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+	const [theme, setTheme] = useState<Theme>("dark");
+	const toggleTheme = () =>
+		setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme}>
-        <Header />
-        <MainBoxes />
-      </div>
-    </ThemeContext.Provider>
-  );
+	return (
+		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+			<div className="App" id={theme}>
+				<Header />
+				<MainBoxes />
+			</div>
+		</ThemeContext.Provider>
+	);
 }
 
 export default App;
