@@ -20,7 +20,7 @@ import {
   Haze,
   Tornado,
   CloudyOverCast,
-} from "@/layouts/WeatherIcons";
+} from "@/constants/WeatherIcons";
 
 const weatherDataIconsByCode = [
   // Thunderstorm

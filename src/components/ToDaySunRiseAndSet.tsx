@@ -1,5 +1,5 @@
 import { IWeather } from "@/store";
-import { SunRise, SunSet } from "../layouts/WeatherIcons";
+import { SunRise, SunSet } from "../constants/WeatherIcons";
 import ConvertUnixToTime from "@/utils/ConvertUnixToTime";
 
 interface IToDatSunRiseAndSetProps {

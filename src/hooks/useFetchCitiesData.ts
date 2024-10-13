@@ -26,7 +26,7 @@ function useFetchCitiesData(citySearchValue: string) {
       } catch (error) {
         // check if error is not cancelled message---
         if (!axios.isCancel(error)) {
-          console.error("Error fetching cities:", error);
+          console.error(error);
           // empty cities state in the store---
           setCityData([]);
         }

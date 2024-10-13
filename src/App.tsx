@@ -4,13 +4,16 @@ import MainBoxes from "./components/MainContent";
 
 type Theme = "dark" | "light";
 
-type ThemeContextType = {
+export type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
 
 // create a themeContext----
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: "dark",
+  toggleTheme: () => {},
+});
 
 function App() {
   const [theme, setTheme] = useState<Theme>("dark");

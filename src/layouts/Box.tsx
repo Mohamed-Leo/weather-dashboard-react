@@ -5,32 +5,23 @@ interface IBoxProps {
   children: ReactNode;
   backGround?: string;
   title?: string;
-  isGrid?: boolean;
-  hasPadding?: boolean;
-  isFlex?: boolean;
-  colSpan?: string;
+  Boxstyle?: string;
   icon?: JSX.Element;
 }
 
-function Box({
-  children,
-  backGround = "",
-  title,
-  isGrid,
-  isFlex,
-  hasPadding,
-  colSpan = "",
-  icon,
-}: IBoxProps) {
+function Box({ children, backGround = "", Boxstyle, title, icon }: IBoxProps) {
   // use the themecontext---
   const themecontextvalues = useContext(ThemeContext);
 
   // destrucure theme and check to avoid errors -----
   const theme = themecontextvalues?.theme;
 
+  // boxBackgorund style---
+  const boxBackgorund = backGround ? "bg-white" : "";
+
   return (
     <div
-      className={`box ${colSpan} ${theme === "dark" ? backGround : `${backGround ? "bg-white" : ""}`} rounded-2xl overflow-hidden ${hasPadding ? "p-4" : ""} space-y-4`}
+      className={`${Boxstyle} ${theme === "dark" ? backGround : boxBackgorund}`}
     >
       {title && (
         <h3 className="flex items-center gap-2 justify-center text-lg font-bold">
@@ -39,11 +30,7 @@ function Box({
         </h3>
       )}
 
-      <div
-        className={`${isFlex ? "flex flex-col items-center justify-center" : isGrid ? "grid grid-cols-2 gap-5" : ""} ${title ? "h-[calc(100%-40px)]" : "h-full"}`}
-      >
-        {children}
-      </div>
+      {children}
     </div>
   );
 }

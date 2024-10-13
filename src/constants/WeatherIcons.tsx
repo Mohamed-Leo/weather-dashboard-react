@@ -684,6 +684,7 @@ export const WindyCloud = ({ width = 50, height = 50 }) => (
         />
       </defs>
       <path
+        className="shape-stroke"
         fill="none"
         stroke="#fff"
         strokeDasharray="35 22"
@@ -700,6 +701,7 @@ export const WindyCloud = ({ width = 50, height = 50 }) => (
         />
       </path>
       <path
+        className="shape-stroke"
         fill="none"
         stroke="#e6effc"
         strokeDasharray="24 15"
@@ -2955,7 +2957,7 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
       </linearGradient>
     </defs>
     <path
-      fill="url(#a)"
+      fill="#848b98"
       stroke="#848b98"
       strokeMiterlimit="10"
       strokeWidth=".5"
@@ -2971,7 +2973,7 @@ export const CloudyOverCast = ({ width = 50, height = 50 }) => (
     </path>
     <path
       className="shape-stroke"
-      fill="url(#b)"
+      fill="#e6effc"
       stroke="#e6effc"
       strokeMiterlimit="10"
       strokeWidth=".5"

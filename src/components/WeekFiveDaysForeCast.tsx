@@ -29,7 +29,7 @@ function WeekFiveDaysForeCast() {
   const weeklyData = processWeeklyForecast(list);
 
   return (
-    <>
+    <div className="h-full">
       <h2 className="flex items-center justify-center gap-2 text-lg font-bold mb-4">
         <IoTodayOutline /> 5-Day Forecast for {city.name}
       </h2>
@@ -46,7 +46,7 @@ function WeekFiveDaysForeCast() {
               key={todayCast.date}
               className="basis-1/2 md:basis-1/3 mx-auto"
             >
-              <div className="week-box space-y-3 rounded-md py-5 px-4 bg-[#192131] hover:bg-[#29354e] transition-colors">
+              <div className="week-box space-y-3 min-h-64 sm:min-h-fit rounded-xl py-5 px-4 bg-[#192131] hover:bg-[#29354e] transition-colors">
                 <h3 className="text-md">{todayCast.date}</h3>
 
                 {/* degree-weather-description */}
@@ -65,7 +65,7 @@ function WeekFiveDaysForeCast() {
           ))}
         </CarouselContent>
       </Carousel>
-    </>
+    </div>
   );
 }
 

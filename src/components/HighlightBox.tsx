@@ -4,13 +4,12 @@ interface IHighlightBoxProps {
   element: ReactNode;
   title?: string;
   backGround?: string;
+  style?: string;
 }
 
-function HighlightBox({ element, title, backGround = "" }: IHighlightBoxProps) {
+function HighlightBox({ element, title, style }: IHighlightBoxProps) {
   return (
-    <div
-      className={`highlight-box flex flex-col gap-1 xl:gap-5 items-center justify-between ${backGround} rounded-2xl md:flex-col xl:flex-row xl:h-[100px] py-3 px-6`}
-    >
+    <div className={`highlight-box ${style} min-h-28`}>
       <h3 className="sm:text-lg md:text-sm">{title}</h3>
 
       <div className="flex items-center justify-center">{element}</div>

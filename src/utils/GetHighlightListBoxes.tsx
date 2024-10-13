@@ -3,18 +3,30 @@ import {
   Cloudy,
   HighHumidity,
   LowHumidity,
-  Wind,
   WindyCloud,
-} from "@/layouts/WeatherIcons";
+} from "@/constants/WeatherIcons";
+import Compass from "@/components/Compass";
 
-function GetHighlightListBoxes(weatherData: IWeather) {
+function getHighlightListBoxes(weatherData: IWeather) {
   // check on data-----
   if (!weatherData) return [];
 
+  // common style---
+  const ComonStyle =
+    "flex flex-col gap-3 xl:gap-5 items-center justify-between bg-[#0e1421] rounded-2xl md:flex-col xl:flex-row py-3 px-6";
+
   const highlightListBoxes = [
+    {
+      title: `Wind (${weatherData?.wind.deg} deg)`,
+      icon: (
+        <Compass width={150} height={150} direction={weatherData?.wind.deg} />
+      ),
+      style: ComonStyle + " col-span-full",
+    },
     {
       title: `Clouds (${weatherData?.clouds.all})`,
       icon: <Cloudy width={60} height={60} />,
+      style: ComonStyle + " col-span-2",
     },
     {
       title: `pressure (${weatherData.main.humidity})`,
@@ -24,18 +36,16 @@ function GetHighlightListBoxes(weatherData: IWeather) {
         ) : (
           <HighHumidity />
         ),
-    },
-    {
-      title: `Wind (speed ${weatherData?.wind.speed}), (deg ${weatherData?.wind.deg})`,
-      icon: <Wind width={60} height={60} />,
+      style: ComonStyle + " col-span-2",
     },
     {
       title: `Humidity (${weatherData?.main.humidity})`,
       icon: <WindyCloud width={60} height={60} />,
+      style: ComonStyle + " col-span-2",
     },
   ];
 
   return highlightListBoxes;
 }
 
-export default GetHighlightListBoxes;
+export default getHighlightListBoxes;

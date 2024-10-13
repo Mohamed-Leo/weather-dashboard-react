@@ -29,7 +29,7 @@ function ToDayWeatherBox() {
   if (!weatherData || !foreCastFivedays) return <Loading />;
 
   return (
-    <div className="space-y-5 w-full">
+    <div className="space-y-5 size-full flex flex-col h-[calc(100%-40px)] justify-evenly">
       {/* top part- today/week */}
       <ToDayListBox
         foreCastFivedays={foreCastFivedays}

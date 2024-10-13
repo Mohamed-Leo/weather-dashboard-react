@@ -35,3 +35,26 @@ export const suggestionsOptions = [
     lat: 30.0626,
   },
 ];
+
+// other cities data----------------------------
+const commanCitiesStyle =
+  "flex flex-col gap-3 items-center justify-center lg:grid grid-cols-2 lg:gap-5 sm:gap-2 col-span-3 rounded-xl py-3 px-6";
+
+export const cities = [
+  {
+    name: "USA",
+    style: commanCitiesStyle,
+  },
+  {
+    name: "Dubai",
+    style: commanCitiesStyle,
+  },
+  {
+    name: "Canada",
+    style: commanCitiesStyle,
+  },
+  {
+    name: "China",
+    style: commanCitiesStyle,
+  },
+];

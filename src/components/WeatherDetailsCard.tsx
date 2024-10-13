@@ -23,12 +23,15 @@ function WeatherDetailsCard() {
   // return loading until geting data-----
   if (!weatherData) return <Loading />;
 
+  // destructure-----
+  const { name, weather } = weatherData;
+
   return (
     <div className="weather-details-card flex flex-col gap-10 sm:gap-5 lg:gap-10 justify-between h-full p-4">
       {/* top part */}
       <div className="flex items-center gap-3 justify-between">
         <h1 className="2xl:text-7xl xl:text-4xl md:text-4xl text-3xl font-bold tracking-wider">
-          {weatherData?.name}
+          {name}
         </h1>
         <Switcher toggleUnit={toggleUnit} unit={unit} />
       </div>
@@ -52,12 +55,12 @@ function WeatherDetailsCard() {
         {/* wather-icon-status */}
         <div className="text-center space-y-4 sm:text-left">
           <WeatherIcon
-            id={weatherData?.weather[0].id as number}
-            iconName={weatherData?.weather[0].icon as string}
+            id={weather[0].id as number}
+            iconName={weather[0].icon as string}
           />
 
           <WeatherStatus
-            weatherDescription={weatherData?.weather[0].description as string}
+            weatherDescription={weather[0].description as string}
             feelsLikeTemp={convertedTemps.feels_like}
             tempIcon={tempIcon}
           />
