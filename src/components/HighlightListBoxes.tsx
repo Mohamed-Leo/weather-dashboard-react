@@ -4,10 +4,8 @@ import useFetchAirPollutionData from "@/hooks/useFetchAirPollutionData";
 import { useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
 import { useEffect } from "react";
-import getHighlightListBoxes, {
-	IHighlightListBoxes,
-} from "@/utils/getHighlightListBoxes";
-import { IWeather } from "@/interfaces";
+import getHighlightListBoxes from "@/utils/getHighlightListBoxes";
+import { IHighlightListBoxes, IWeather } from "@/interfaces";
 
 function HighlightListBoxes() {
 	/*

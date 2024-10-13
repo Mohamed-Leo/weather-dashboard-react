@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext, ThemeContextType } from "@/App";
-import { IWeather, useWeatherStore } from "@/store";
+import { useWeatherStore } from "@/store";
 import { Line } from "react-chartjs-2";
 import {
 	Chart as ChartJS,
@@ -15,6 +15,7 @@ import {
 	ChartOptions,
 } from "chart.js";
 import Loading from "@/layouts/Loading";
+import { IWeather } from "@/interfaces";
 ChartJS.register(
 	CategoryScale,
 	LinearScale,
