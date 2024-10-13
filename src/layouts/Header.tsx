@@ -3,7 +3,7 @@ import SearchDialog from "../components/SearchDialog";
 import ThemeSwitch from "./ThemeSwitch";
 import TimerClock from "./TimerClock";
 
-function Header() {
+function Header(): JSX.Element {
 	return (
 		<header className="container flex flex-col sm:flex-row px-5 sm:px-0 items-center justify-center md:justify-between flex-wrap gap-6">
 			{/* search-icons(location)-box */}

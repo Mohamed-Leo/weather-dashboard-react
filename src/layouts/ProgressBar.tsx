@@ -1,11 +1,10 @@
 import { Progress } from "@/components/ui/progress";
+import { IProgressBarProps } from "@/interfaces";
 
-interface IProgressBarProps {
-	children: JSX.Element;
-	progress: number;
-}
-
-export function ProgressBar({ children, progress }: IProgressBarProps) {
+export function ProgressBar({
+	children,
+	progress,
+}: IProgressBarProps): JSX.Element {
 	return (
 		<div className="col-span-full space-y-2 capitalize">
 			{children}

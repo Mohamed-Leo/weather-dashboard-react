@@ -1,15 +1,14 @@
-import { ReactNode, useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../App";
+import { IBoxProps } from "@/interfaces";
 
-interface IBoxProps {
-	children: ReactNode;
-	backGround?: string;
-	title?: string;
-	Boxstyle?: string;
-	icon?: JSX.Element;
-}
-
-function Box({ children, backGround = "", Boxstyle, title, icon }: IBoxProps) {
+function Box({
+	children,
+	backGround = "",
+	Boxstyle,
+	title,
+	icon,
+}: IBoxProps): JSX.Element {
 	// use the themecontext---
 	const themecontextvalues = useContext(ThemeContext);
 

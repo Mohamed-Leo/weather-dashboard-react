@@ -274,3 +274,32 @@ export interface IHighlightListBoxes {
 	icon: JSX.Element;
 	style: string;
 }
+
+// layouts interfaces------
+export interface ILoadingProps {
+	height?: string;
+	width?: string;
+}
+
+export interface IBoxProps {
+	children: JSX.Element;
+	backGround?: string;
+	title?: string;
+	Boxstyle?: string;
+	icon?: JSX.Element;
+}
+
+export interface IOptionIcons {
+	title: string;
+	icon: JSX.Element;
+}
+
+export interface IProgressBarProps {
+	children: JSX.Element;
+	progress: number;
+}
+
+export interface ISwitcherProps {
+	toggleUnit: () => void;
+	unit?: string;
+}

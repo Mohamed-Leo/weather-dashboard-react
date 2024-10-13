@@ -1,11 +1,10 @@
 import { Skeleton } from "@/components/ui/skeleton";
+import { ILoadingProps } from "@/interfaces";
 
-interface ILoadingProps {
-	height?: string;
-	width?: string;
-}
-
-function Loading({ height = "min-h-80", width = "w-fit" }: ILoadingProps) {
+function Loading({
+	height = "min-h-80",
+	width = "w-fit",
+}: ILoadingProps): JSX.Element {
 	return <Skeleton className={`${height} ${width}`} />;
 }
 

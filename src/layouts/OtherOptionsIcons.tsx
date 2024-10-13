@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { IOptionIcons } from "@/interfaces";
 import { useWeatherStore } from "@/store";
 import ErrorAlert from "@/utils/ErrorAlert";
 import fetchWeatherDataByLocation from "@/utils/fetchWeatherDataByLocation ";
 import getUserLocation from "@/utils/getUserLocation";
 import { IoLocation } from "react-icons/io5";
 
-// options---
-const options = [{ title: "location", icon: <IoLocation fontSize={20} /> }];
+// options icons---
+const options: IOptionIcons[] = [
+	{ title: "location", icon: <IoLocation fontSize={20} /> },
+];
 
 type TGeoLocation = {
 	lat: number;
@@ -47,7 +50,7 @@ function OtherOptionsIcons() {
 
 	return (
 		<div className="other-options-box flex items-center gap-5 sm:gap-3 flex-wrap justify-center">
-			{options.map((option) => (
+			{options.map((option: IOptionIcons) => (
 				<Button
 					key={option.title}
 					className={`${option.title}-icon text-[#676b73] cursor-pointer transition-all active:translate-y-[5px] bg-[#0e1421] rounded-md hover:bg-[#22304e] hover:text-white`}

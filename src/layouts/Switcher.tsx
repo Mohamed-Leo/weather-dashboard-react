@@ -1,11 +1,10 @@
+import { ISwitcherProps } from "@/interfaces";
 import { RiCelsiusLine, RiFahrenheitLine } from "react-icons/ri";
 
-interface ISwitcherProps {
-	toggleUnit: () => void;
-	unit?: string;
-}
-
-function Switcher({ toggleUnit, unit = "celsius" }: ISwitcherProps) {
+function Switcher({
+	toggleUnit,
+	unit = "celsius",
+}: ISwitcherProps): JSX.Element {
 	// handle style animation move for the Switcher---
 	const changeMove = unit === "celsius";
 

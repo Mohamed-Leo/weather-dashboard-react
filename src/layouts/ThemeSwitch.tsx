@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 import { ThemeContext } from "../App";
 
-function ThemeSwitch() {
+function ThemeSwitch(): JSX.Element {
 	// use the themecontext---
 	const themecontextvalues = useContext(ThemeContext);
 

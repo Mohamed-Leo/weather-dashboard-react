@@ -3,7 +3,7 @@ import { useWeatherStore } from "@/store";
 import { useEffect, useState } from "react";
 import moment from "moment-timezone";
 
-function TimerClock() {
+function TimerClock(): JSX.Element {
 	const [currentTime, setCurrentTime] = useState("");
 
 	// get the timezone from the weatherData from the store--
