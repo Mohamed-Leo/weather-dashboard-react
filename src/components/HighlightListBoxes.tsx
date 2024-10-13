@@ -35,7 +35,9 @@ function HighlightListBoxes() {
 	if (!weatherData || !airPollution) return <Loading />;
 
 	// get the highlightListBoxes data from utiliy------
-	const highlightListBoxes = getHighlightListBoxes(weatherData as IWeather);
+	const highlightListBoxes: IHighlightListBoxes[] = getHighlightListBoxes(
+		weatherData as IWeather,
+	);
 
 	return (
 		<div className="grid grid-cols-6 gap-5">
