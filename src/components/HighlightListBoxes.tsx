@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import getHighlightListBoxes from "@/utils/getHighlightListBoxes";
 import { IHighlightListBoxes, IWeather } from "@/interfaces";
 
-function HighlightListBoxes() {
+function HighlightListBoxes(): JSX.Element {
 	/*
 	 * get the weatherdata from the store to get the location to fetch the airPollution data--
 	 * get the airPollution data and setAirPollution----
