@@ -1,4 +1,4 @@
-import { API_KEY } from "./../../config"; // Adjust the path as necessary
+import { API_KEY } from "../../config"; // Adjust the path as necessary
 import axios from "axios";
 
 type TGeoLocation = {

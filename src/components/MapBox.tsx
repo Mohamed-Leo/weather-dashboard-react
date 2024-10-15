@@ -4,6 +4,23 @@ import { useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
 import FlyToCityMap from "./FlyToCityMap";
 
+// Import Leaflet and the marker images to fix the image issue when deploy------
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+// Fix the default icon using images from the public folder
+const DefaultIcon = L.icon({
+	iconUrl: "/marker-icon.png", // Public folder path
+	shadowUrl: "/marker-shadow.png",
+	iconRetinaUrl: "/marker-icon-2x.png",
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 type TLocationCoords = [number, number];
 
 function MapBox() {

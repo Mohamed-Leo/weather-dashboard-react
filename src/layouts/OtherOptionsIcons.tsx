@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { IOptionIcons } from "@/interfaces";
 import { useWeatherStore } from "@/store";
 import ErrorAlert from "@/utils/ErrorAlert";
-import fetchWeatherDataByLocation from "@/utils/fetchWeatherDataByLocation ";
+import fetchWeatherDataByLocation from "@/utils/fetchWeatherDataByLocation";
 import getUserLocation from "@/utils/getUserLocation";
 import { IoLocation } from "react-icons/io5";
 
