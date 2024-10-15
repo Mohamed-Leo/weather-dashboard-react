@@ -12,7 +12,7 @@ function useFetchCitiesData(citySearchValue: string) {
 		const fetchWeatherByCity = async () => {
 			try {
 				const response = await axios.get(
-					`http://api.openweathermap.org/geo/1.0/direct?q=${citySearchValue}&appid=${API_KEY}`,
+					`https://api.openweathermap.org/geo/1.0/direct?q=${citySearchValue}&appid=${API_KEY}`,
 					{ signal: controller.signal },
 				);
 

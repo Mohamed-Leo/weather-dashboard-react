@@ -15,7 +15,7 @@ function useFetchForecastByGeoLocation({
 		const fetchForecastByGeoLocation = async () => {
 			try {
 				const response = await axios.get(
-					`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`,
+					`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`,
 					{ signal: controller.signal },
 				);
 

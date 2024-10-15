@@ -1,7 +1,7 @@
 // this function to convert the tempNumber-----
 import { useState, useMemo } from "react";
 import { ConvertedTemperatures, TemperatureData } from "@/interfaces";
-import convertedTempIcon from "@/utils/ConvertedTempIcon";
+import convertedTempIcon from "@/utils/convertedTempIcon";
 
 type TemperatureUnit = "celsius" | "fahrenheit";
 
