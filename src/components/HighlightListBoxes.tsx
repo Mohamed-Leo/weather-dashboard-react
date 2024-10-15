@@ -5,7 +5,7 @@ import { useWeatherStore } from "@/store";
 import Loading from "@/layouts/Loading";
 import { useEffect } from "react";
 import { IHighlightListBoxes, IWeather } from "@/interfaces";
-import getHighlightListBoxes from "@/utils/getHighlightListBoxes.tsx";
+import getHighlightListBoxes from "../utils/getHighlightListBoxes";
 
 function HighlightListBoxes(): JSX.Element {
 	/*
