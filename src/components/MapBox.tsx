@@ -10,9 +10,9 @@ import "leaflet/dist/leaflet.css";
 
 // Fix the default icon using images from the public folder
 const DefaultIcon = L.icon({
-	iconUrl: "/marker-icon.png", // Public folder path
-	shadowUrl: "/marker-shadow.png",
-	iconRetinaUrl: "/marker-icon-2x.png",
+	iconUrl: "marker-icon.png", // Public folder path
+	shadowUrl: "marker-shadow.png",
+	iconRetinaUrl: "marker-icon-2x.png",
 	iconSize: [25, 41],
 	iconAnchor: [12, 41],
 	popupAnchor: [1, -34],

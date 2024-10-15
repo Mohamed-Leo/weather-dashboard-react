@@ -158,6 +158,11 @@ Once the app is running, you can:
 - Switch between light and dark themes using the theme toggle button.
 - View weather trends and history via the interactive charts.
 
+## Demo
+
+You can view the complete demo from here:
+[Weather Dashboard Demo Link](https://weather-dashboard-rouge-ten.vercel.app/)
+
 ## Contributing
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to submit a pull request or open an issue.

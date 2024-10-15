@@ -1,5 +1,5 @@
 async function getUserLocation() {
-	// check if the geolocation is supported ------
+	// check if the geolocation is supported------
 	if ("geolocation" in navigator) {
 		return new Promise((resolve, reject) => {
 			navigator.geolocation.getCurrentPosition(
