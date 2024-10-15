@@ -1,10 +1,10 @@
 import moment from "moment-timezone";
 
-const ConvertUnixToTime = (unix: number, timezone: number): string => {
+const convertUnixToTime = (unix: number, timezone: number): string => {
 	return moment
 		.unix(unix)
 		.utcOffset(timezone / 60)
 		.format("HH:mm");
 };
 
-export default ConvertUnixToTime;
+export default convertUnixToTime;
