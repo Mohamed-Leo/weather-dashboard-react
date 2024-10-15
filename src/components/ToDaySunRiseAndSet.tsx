@@ -1,6 +1,6 @@
 import { IToDatSunRiseAndSetProps } from "@/interfaces";
 import { SunRise, SunSet } from "../constants/WeatherIcons";
-import convertUnixToTime from "@/utils/ConvertUnixToTime";
+import convertUnixToTime from "@/utils/convertUnixToTime";
 
 function ToDaySunRiseAndSet({
 	weatherData,
