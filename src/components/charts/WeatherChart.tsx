@@ -170,7 +170,9 @@ const WeatherChart = () => {
 	// check before loading----
 	if (!chartData) return <Loading />;
 
-	return <Line className="w-full" data={chartData} options={options} />;
+	return (
+		<Line className="w-full min-h-80" data={chartData} options={options} />
+	);
 };
 
 export default WeatherChart;
