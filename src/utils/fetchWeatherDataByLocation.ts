@@ -11,7 +11,7 @@ const fetchWeatherDataByLocation = async (geoLocation: TGeoLocation) => {
 
 	try {
 		const response = await axios.get(
-			`http://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.lat}&lon=${geoLocation.lon}&appid=${API_KEY}`,
+			`https://api.openweathermap.org/data/2.5/weather?lat=${geoLocation.lat}&lon=${geoLocation.lon}&appid=${API_KEY}`,
 			{ signal: controller.signal },
 		);
 
