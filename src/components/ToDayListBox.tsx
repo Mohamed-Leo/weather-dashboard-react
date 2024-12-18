@@ -8,7 +8,7 @@ import {
 	CarouselItem,
 } from "@/components/ui/carousel";
 import { IForecastItem, IWeatherForecast } from "@/interfaces";
-import getToDayForeCast from "@/utils/getToDayForeCast";
+import { getToDayForeCast } from "@/utils/getToDayForeCast";
 
 interface IToDayBoxProps {
 	backGround: string;
